@@ -1,6 +1,9 @@
 # HTim
 Clanovi tima:
-1. Belma Homarac  2. Delila Halilovic  3. Sumejja Halilovic  4. Selmir Hasanovic
+1. Belma Homarac<br />
+2. Delila Halilovic<br />
+3. Sumejja Halilovic<br />
+4. Selmir Hasanovic<br />
 
 ##Opis teme
 Sistem za iznajmljivanje automobila i sliènih prevoznih sredstava, uz mogucnost odredenih popusta.
@@ -41,6 +44,8 @@ izdaje potvrdu klijentu da je automobil vracen.
 
 ## Akteri
 
-**Vlasnik** - osoba koja ima uvid u cjelokupan rad i finansijski status firme.  **Supervizor** - ima zadatak da nadgleda rad uposlenika, primopredaju vozila te vrsi update kataloga kako bi u svakom trenutku korisnici imali informaciju o dostupnim automobilima.  **Dezurni radnik** - osoba koja radi za firmu Rent-a-car na poslovima iznajmljivanja, rezervacije i naplacivanja.  **Vozac** - ima zadatak da po zelji klijenta vrsi usluge voznje.
-**Majstor** - osoba koja je zaduzena za popravku eventualnih kvarova te procjenu materijalne stete na pokvarenom automobilu.
-**Korisnik** - osoba koja ima mogucnost iznajmljivanja i rezervacije automobila na licu mjesta ili putem online sistema (online korisnik).
+**Vlasnik** - osoba koja ima uvid u cjelokupan rad i finansijski status firme.<br />
+**Supervizor** - ima zadatak da nadgleda rad uposlenika, primopredaju vozila te vrsi update kataloga kako bi u svakom trenutku korisnici imali informaciju o dostupnim automobilima.<br />
+**Dezurni radnik** - osoba koja radi za firmu Rent-a-car na poslovima iznajmljivanja, rezervacije i naplacivanja.  **Vozac** - ima zadatak da po zelji klijenta vrsi usluge voznje.<br />
+**Majstor** - osoba koja je zaduzena za popravku eventualnih kvarova te procjenu materijalne stete na pokvarenom automobilu.<br />
+**Korisnik** - osoba koja ima mogucnost iznajmljivanja i rezervacije automobila na licu mjesta ili putem online sistema (online korisnik).<br />
