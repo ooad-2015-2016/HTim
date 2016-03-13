@@ -30,4 +30,4 @@ Provjerava se prilozena dokumentacija, ispravnost automobila te se osiguravaju a
 udesa i sl.), zatim vrsi upis podataka o klijentu, periodu iznajmljivanja i automobilu u bazi podataka i izdaje 
 automobil. Kada klijent vraca automobil, agencija prvo vrsi provjeru automobila (i ukoliko ima ostecenja vrsi 
 naplatu od osiguravajuce kuce) i upisuje podatke o tome da je automobil vracen u bazu podataka te na salteru 
-izdaje potvrdu klijentu da je automobil vracen.
+izdaje potvrdu klijentu da je automobil vracen. 
