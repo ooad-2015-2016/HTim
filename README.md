@@ -1,11 +1,11 @@
 # HTim
 Clanovi tima:
-	1. Belma Homarac
-	2. Delila Halilovic
-	3. Sumejja Halilovic
-	4. Selmir Hasanovic
+1. Belma Homarac
+2. Delila Halilovic
+3. Sumejja Halilovic
+4. Selmir Hasanovic
 
-## Opis teme
+##Opis teme
 Sistem za iznajmljivanje automobila i sliènih prevoznih sredstava, uz mogucnost odredenih popusta.
 Provjera se vrsi pomocu jedinstvenog koda koji se pri rezervaciji salje na korisnikov mail.
 Korisnicima se nudi mogucnost pregled detaljnog opisa svakog vozila u ponudi.
@@ -31,3 +31,22 @@ udesa i sl.), zatim vrsi upis podataka o klijentu, periodu iznajmljivanja i auto
 automobil. Kada klijent vraca automobil, agencija prvo vrsi provjeru automobila (i ukoliko ima ostecenja vrsi 
 naplatu od osiguravajuce kuce) i upisuje podatke o tome da je automobil vracen u bazu podataka te na salteru 
 izdaje potvrdu klijentu da je automobil vracen. 
+
+##Funkcionalnosti
+*Mogucnost iznajmljivanja automobila u periodu od 24h do 6 mjeseci
+*Dozvoljene valute uplate: EUR i BAM
+*Iskusno osoblje pomaze pri odabiru najoptimalnijeg vozila
+*Mogucnost prevoza sa/do aerodroma, autobuske ili zeljeznicke stanice do nase rent a car kuce
+*Mogucnost doplate za GPS navigacijski uredjaj, sjedalicu za dijete itd..
+*Mogucnost zamjene vozila u slucaju kvara
+*Uplata neovisna o kilometrazi
+*Mogucnost otkazivanja rezervacije
+
+## Akteri
+
+**Vlasnik** - osoba koja ima uvid u cjelokupan rad i finansijski status firme.
+**Supervizor** - ima zadatak da nadgleda rad uposlenika, primopredaju vozila te vrsi update kataloga kako bi u svakom trenutku korisnici imali informaciju o dostupnim automobilima. 
+**Dezurni radnik** - osoba koja radi za firmu Rent-a-car na poslovima iznajmljivanja, rezervacije i naplacivanja.
+**Vozac** - ima zadatak da po zelji klijenta vrsi usluge voznje.
+**Majstor** - osoba koja je zaduzena za popravku eventualnih kvarova te procjenu materijalne stete na pokvarenom automobilu.
+**Korisnik** - osoba koja ima mogucnost iznajmljivanja i rezervacije automobila na licu mjesta ili putem online sistema (online korisnik).
