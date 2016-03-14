@@ -21,16 +21,25 @@ podaci o vozilima i ljudima koji su ih iznajmljivali i u kom periodu kao i samih
 slobodnih vozila, zauzetih vozila kao i tehnickih sluzbi koje rade provjeru vozila.
 
 ######Salter
-Klijent dolazi licno u agenciju i na salteru se registruje te (pomocu internet kataloga) izabere vozilo koje hoce 
-da iznajmi, provjerava se sa administracijom da li je vozilo dostupno. Zatim se vrsi uplata na ziro racun agencije. 
-Klijent donosi svu dokumentaciju i potvrdu o uplati na salter agencije. 
+1. Klijent, bilo da je registrovan ili ne, moze pregledati automobile u ponudi te procitati detaljnije opise. Osobe koje
+nisu registrovane mogu samo vidjeti automobile u ponudi, ukoliko zele iznajmiti isti, moraju se registrovati.<br />
+2. Klijent se registruje tako sto popuni potrebne licne podatke, te dobija kod (sifru). Registraciju moge izvrsiti osoba starija od 18 godina, bilo da je strani drzavljanin
+ ili ne.  <br />
+3. Prilikom registracije vrsi se fotografisanje klijenta te snimanje njegovog glasa. Ti podaci se mogu koristiti za identifikovanje korisnika,
+ u slucaju da to bude potrebno.<br />
+4. Prilikom odabira vozila, provjerava se njegova ispravnost i dostupnost u trazenom periodu. Ovaj dio se vrsi uz pomoc
+ administracije koja je zaduzena za evidneciju i raspolozivost svih automobila. u zavisnosti od perioda na koji se zeli iznjamiti 
+automobil obracunava se i odgovarajuci popust te se ta cijena saopcava klijentu. <br />
+5. Uplata se vrsi odmah po rezervaciji vozila.<br />
 
 ######Administracija 
-Provjerava se prilozena dokumentacija, ispravnost automobila te se osiguravaju automobili (u slucaju kradje,
-udesa i sl.), zatim vrsi upis podataka o klijentu, periodu iznajmljivanja i automobilu u bazi podataka i izdaje 
-automobil. Kada klijent vraca automobil, agencija prvo vrsi provjeru automobila (i ukoliko ima ostecenja vrsi 
-naplatu od osiguravajuce kuce) i upisuje podatke o tome da je automobil vracen u bazu podataka te na salteru 
-izdaje potvrdu klijentu da je automobil vracen. 
+1. Zaduzena je za provjeru prilozene dokumentacije, ispravnosti automobila, te je zaduzenja za njihovo osiguranje(u slucaju kradje,
+udesa i sl.)<br />
+2. Ukoliko je klijent iznajmio vozilo, vodi se evidencija o tome te se potrebni podaci upisuju u bazu. <br />
+3. Podatke o lokaciji svih svojih vozila evidentira pomocu GPS uredjaja, koje posjeduje svako vozilo ove agencije.<br />
+4. Prilikom vracanja automobila agenciji, provjerava se stanje automobila(i ukoliko ima ostecenja vrsi se 
+naplatu od osiguravajuce kuce) i upisuju se podaci o tome da je automobil vracen u bazu podataka te se na salteru 
+izdaje potvrda klijentu da je automobil vracen. <br />
 
 ##Funkcionalnosti
 - Mogucnost iznajmljivanja automobila u periodu od 24h do 6 mjeseci
