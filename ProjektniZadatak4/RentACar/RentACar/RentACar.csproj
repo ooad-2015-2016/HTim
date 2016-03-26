@@ -95,11 +95,32 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormeAdministrator\ArhivaKlijenti.xaml.cs">
+      <DependentUpon>ArhivaKlijenti.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormeAdministrator\ArhivaVozila.xaml.cs">
+      <DependentUpon>ArhivaVozila.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormeAdministrator\DetaljnijiPrikazArhivaKlijenti.xaml.cs">
+      <DependentUpon>DetaljnijiPrikazArhivaKlijenti.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormeAdministrator\DetaljnijiPrikazArhivaVozila.xaml.cs">
+      <DependentUpon>DetaljnijiPrikazArhivaVozila.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormeAdministrator\DetaljnijiPrikazArhivaZaposlenici.xaml.cs">
+      <DependentUpon>DetaljnijiPrikazArhivaZaposlenici.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormeAdministrator\ArhivaZaposlenici.xaml.cs">
+      <DependentUpon>ArhivaZaposlenici.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AdministratorLogIn.xaml.cs">
       <DependentUpon>AdministratorLogIn.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormeAdministrator\Administrator1.xaml.cs">
+      <DependentUpon>Administrator1.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -136,7 +157,35 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="FormeAdministrator\ArhivaKlijenti.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormeAdministrator\ArhivaVozila.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormeAdministrator\DetaljnijiPrikazArhivaKlijenti.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormeAdministrator\DetaljnijiPrikazArhivaVozila.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormeAdministrator\DetaljnijiPrikazArhivaZaposlenici.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormeAdministrator\ArhivaZaposlenici.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AdministratorLogIn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormeAdministrator\Administrator1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

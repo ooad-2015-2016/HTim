@@ -1,0 +1,32 @@
+﻿<Page
+    x:Class="RentACar.Administrator2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RentACar"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="#FFD4CBCB">
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Arhiva -&gt; Zaposlenici" VerticalAlignment="Top" FontSize="18.667"/>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="440" Margin="10,190,0,0" VerticalAlignment="Top" Width="340">
+            <ListBoxItem Content="Mujo Mujic" FontSize="18.667" Height="72"/>
+        </ListBox>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="10,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="145" Width="340" FontSize="16">
+        	<Run Text=""/>
+        	<LineBreak/>
+        	<Run Text="("/>
+        	<Run Text="za izmjenu ili detaljniji prikaz podataka "/>
+        	<Run Text="kliknite na odgovaraj"/>
+        	<Run Text="uć"/>
+        	<Run Text="eg zaposlenika)"/>
+        	<LineBreak/>
+        	<Run/>
+        	<LineBreak/>
+        	<Run Text="Lista zaposle"/>
+        	<Run Text="nika"/>
+        	<Run Text=":"/>
+        </TextBlock>
+
+    </Grid>
+</Page>
