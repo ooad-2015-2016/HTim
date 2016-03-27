@@ -113,7 +113,22 @@
     <Compile Include="FormeAdministrator\ArhivaZaposlenici.xaml.cs">
       <DependentUpon>ArhivaZaposlenici.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AdministratorLogIn.xaml.cs">
+    <Compile Include="FormeKorisnik\DetaljiOAutomobilu.xaml.cs">
+      <DependentUpon>DetaljiOAutomobilu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormeKorisnik\KorisničkiMeni.xaml.cs">
+      <DependentUpon>KorisničkiMeni.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormeKorisnik\NajamAutomobila.xaml.cs">
+      <DependentUpon>NajamAutomobila.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormeKorisnik\OtkazivanjeRezervacije.xaml.cs">
+      <DependentUpon>OtkazivanjeRezervacije.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormeKorisnik\Zamjena.xaml.cs">
+      <DependentUpon>Zamjena.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormeLogIn\AdministratorLogIn.xaml.cs">
       <DependentUpon>AdministratorLogIn.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
@@ -125,14 +140,14 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PočetniEkran.xaml.cs">
+    <Compile Include="FormeLogIn\PočetniEkran.xaml.cs">
       <DependentUpon>PočetniEkran.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegistracijaČlana.xaml.cs">
+    <Compile Include="FormeLogIn\RegistracijaČlana.xaml.cs">
       <DependentUpon>RegistracijaČlana.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ČlanLogIn.xaml.cs">
+    <Compile Include="FormeLogIn\ČlanLogIn.xaml.cs">
       <DependentUpon>ČlanLogIn.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -181,7 +196,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AdministratorLogIn.xaml">
+    <Page Include="FormeKorisnik\DetaljiOAutomobilu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormeKorisnik\KorisničkiMeni.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormeKorisnik\NajamAutomobila.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormeKorisnik\OtkazivanjeRezervacije.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormeKorisnik\Zamjena.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormeLogIn\AdministratorLogIn.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -193,15 +228,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="PočetniEkran.xaml">
+    <Page Include="FormeLogIn\PočetniEkran.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="RegistracijaČlana.xaml">
+    <Page Include="FormeLogIn\RegistracijaČlana.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ČlanLogIn.xaml">
+    <Page Include="FormeLogIn\ČlanLogIn.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
