@@ -1,0 +1,24 @@
+1. Princip pojedinaène odgovornosti ( eng. Single Responsibility Principle-SRP) 
+
+Ovaj princip nije prekršen jer sve klase na našem dijagramu klasa znaju o samoj jednoj stvari i imaju samo jedan razlog za promjenu. Npr. klasa Vozilo se sastoji samo
+od atributa koji su potrebni da opiše vozilo, a pomoæu interfejsa smo realizirali dodatnu opciju za praæenje automobila pomoæu GPS-a. 
+
+2. Otvoreno zatvoren princip ( eng. Open Closed Principle-OCP)
+
+U sluèaju ovog principa razmatramo klasu Vozilo. Zakljuèili smo da smo omoguæili nadogradnju i izmjenu kataloga vozila bez izmjene osnovnog modula, tj. klase Vozilo. Na ovaj naèin omoguæeno je da bez modifikacije podataka o Vozilu možemo izvršiti njihovu nadogradnju i dodavanje i brisanje u katalog.
+
+3. Liskov princip zamjene (eng. Liskov Substitution Principle-LSP)
+
+Klasu KorisnikUsluga nasljeðujemo klasama OnlineKlijent i Klijent te su one zamjenjive ovom baznom klasom zbog toga što je moguæe iskoristiti sve atribute i metode iz 
+bazne klase u izvedenim. 
+
+4. Princip inverzije ovisnosti (eng. Dependency Inversion Principle-DIP)
+
+U našem dijagramu klasa zastupljena je jedna generalizacija vezana za klasu KorisnikUsluga. Ovo je konkretna klasa i ona ne ovisi od klasa koje je nasljeðuju tj. od 
+modula nižeg nivoa. Isto tako nemamo ovisnosti od apstrakcija jer nemamo apstraktnih klasa. Smatrali smo da KorisnikUsluga ne treba da bude apstraktna klasa jer imamo
+samo dvije klase koje je nasljeðuju i može da bude bazna. 
+
+5. Princip izoliranja interfejsa ( eng. Interface Segregation Principle-ISP)
+
+Naš dijagram klasa ima dva interfejsa InterfejsZaPlaæanje i InterfejsZaGPS i oba ova interfejsa služe za to da korisniku pruže dodatne opcije koje može koristiti 
+tako da je ovaj princip zadovoljen tj. izolirali smo interfejse.
