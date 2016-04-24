@@ -105,6 +105,11 @@
     <Compile Include="Migrations\20160423213944_InitialMigration.designer.cs">
       <DependentUpon>20160423213944_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20160424205822_Context.cs" />
+    <Compile Include="Migrations\20160424205822_Context.designer.cs">
+      <DependentUpon>20160424205822_Context.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\KorisnikUslugaDbContextModelSnapshot.cs" />
     <Compile Include="Migrations\VozacDbContextModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RentACarBaza\Models\KorisnikUsluga.cs" />
@@ -141,7 +146,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="RentACarBaza\Views\" />
+    <Folder Include="RentACarBaza\Models\Views\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

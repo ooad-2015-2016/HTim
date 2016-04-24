@@ -14,7 +14,7 @@ namespace App1.RentACarBaza.Models
     {
             [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 
-            int idRezervacije { get; set; }
+            int RezervacijaID { get; set; }
             Lokacija lokacija { get; set; }
             VrstaIznajmljivanja vrstaIznajmljivanja { get; set; }
             DateTime datumRezervisanja { get; set; }
