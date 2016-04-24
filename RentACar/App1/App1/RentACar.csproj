@@ -118,6 +118,8 @@
     <Compile Include="RentACarBaza\Models\RezervacijaDbContext.cs" />
     <Compile Include="RentACarBaza\Models\Vozac.cs" />
     <Compile Include="RentACarBaza\Models\VozacDbContext.cs" />
+    <Compile Include="RentACarBaza\Models\Vozilo.cs" />
+    <Compile Include="RentACarBaza\Models\VoziloDbContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -147,6 +149,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="RentACarBaza\Models\Views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
