@@ -112,10 +112,14 @@
     <Compile Include="Migrations\KorisnikUslugaDbContextModelSnapshot.cs" />
     <Compile Include="Migrations\VozacDbContextModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RentACarBaza\DataSource\DataSourceRentACar.cs" />
+    <Compile Include="RentACarBaza\Models\Administrator.cs" />
+    <Compile Include="RentACarBaza\Models\Klijent.cs" />
     <Compile Include="RentACarBaza\Models\KorisnikUsluga.cs" />
     <Compile Include="RentACarBaza\Models\KorisnikUslugaDbContext.cs" />
     <Compile Include="RentACarBaza\Models\Rezervacija.cs" />
     <Compile Include="RentACarBaza\Models\RezervacijaDbContext.cs" />
+    <Compile Include="RentACarBaza\Models\Uposlenik.cs" />
     <Compile Include="RentACarBaza\Models\Vozac.cs" />
     <Compile Include="RentACarBaza\Models\VozacDbContext.cs" />
     <Compile Include="RentACarBaza\Models\Vozilo.cs" />
@@ -148,7 +152,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="RentACarBaza\Models\Views\" />
+    <Folder Include="RentACarBaza\ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />

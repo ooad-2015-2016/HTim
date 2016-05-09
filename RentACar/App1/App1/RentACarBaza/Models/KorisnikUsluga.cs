@@ -14,9 +14,17 @@ namespace App1.RentACarBaza.Models
         public int KorisnikUslugaID { get; set; }
         private string ime;
         private string prezime;
-        private string prebivaliste;
-        private bool validnaVozackaDozvola;
-        private bool punoljetnost;
+        private string sifra;
+        private string email;
+        
+        public KorisnikUsluga (int id, string i, string p, string s, string e)
+        {
+            KorisnikUslugaID = id;
+            ime = i;
+            prezime = p;
+            sifra = s;
+            email = e;
+        }
 
          public string Ime
         {
@@ -44,42 +52,31 @@ namespace App1.RentACarBaza.Models
             }
         }
 
-        public string Prebivaliste
+        
+
+        public string Sifra
         {
             get
             {
-                return prebivaliste;
+                return sifra;
             }
 
             set
             {
-                prebivaliste = value;
+                sifra = value;
             }
         }
 
-        public bool ValidnaVozackaDozvola
+        public string Email
         {
             get
             {
-                return validnaVozackaDozvola;
+                return email;
             }
 
             set
             {
-                validnaVozackaDozvola = value;
-            }
-        }
-
-        public bool Punoljetnost
-        {
-            get
-            {
-                return punoljetnost;
-            }
-
-            set
-            {
-                punoljetnost = value;
+                email = value;
             }
         }
     }
