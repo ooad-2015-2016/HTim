@@ -25,6 +25,9 @@ namespace App1.RentACarBaza.Models
             sifra = s;
             email = e;
         }
+        public KorisnikUsluga ()
+            {
+            }
 
          public string Ime
         {

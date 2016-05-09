@@ -13,5 +13,9 @@ namespace App1.RentACarBaza.Models
         {
             uposlenici = new List<Uposlenik>();
         }
+
+        public Administrator()
+        {
+        }
     }
 }

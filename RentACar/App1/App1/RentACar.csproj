@@ -113,7 +113,9 @@
     <Compile Include="Migrations\VozacDbContextModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RentACarBaza\DataSource\DataSourceRentACar.cs" />
+    <Compile Include="RentACarBaza\INavigacija.cs" />
     <Compile Include="RentACarBaza\Models\Administrator.cs" />
+    <Compile Include="RentACarBaza\Models\AdministratorDbContext.cs" />
     <Compile Include="RentACarBaza\Models\Klijent.cs" />
     <Compile Include="RentACarBaza\Models\KorisnikUsluga.cs" />
     <Compile Include="RentACarBaza\Models\KorisnikUslugaDbContext.cs" />
@@ -124,6 +126,25 @@
     <Compile Include="RentACarBaza\Models\VozacDbContext.cs" />
     <Compile Include="RentACarBaza\Models\Vozilo.cs" />
     <Compile Include="RentACarBaza\Models\VoziloDbContext.cs" />
+    <Compile Include="RentACarBaza\NavigationService.cs" />
+    <Compile Include="RentACarBaza\RelayCommand.cs" />
+    <Compile Include="RentACarBaza\ViewModels\AdministratorViewModel.cs" />
+    <Compile Include="RentACarBaza\ViewModels\AdministratorLoginViewModel.cs" />
+    <Compile Include="RentACarBaza\Views\ArhivaKlijenti.xaml.cs">
+      <DependentUpon>ArhivaKlijenti.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RentACarBaza\Views\ArhivaVozila.xaml.cs">
+      <DependentUpon>ArhivaVozila.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RentACarBaza\Views\ArhivaZaposlenici.xaml.cs">
+      <DependentUpon>ArhivaZaposlenici.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RentACarBaza\Views\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RentACarBaza\Views\NajamAutomobila.xaml.cs">
+      <DependentUpon>NajamAutomobila.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -150,10 +171,36 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="RentACarBaza\Views\AdministratorLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RentACarBaza\Views\AdministratorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RentACarBaza\Views\ArhivaKlijenti.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RentACarBaza\Views\ArhivaVozila.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RentACarBaza\Views\ArhivaZaposlenici.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RentACarBaza\Views\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RentACarBaza\Views\NajamAutomobila.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="RentACarBaza\ViewModels\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Reference Include="System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
   </ItemGroup>
