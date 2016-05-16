@@ -8,14 +8,24 @@
     xmlns:data="using:HRentACar.HRentACar.Views.Kontrole"
     mc:Ignorable="d">
 
-    <Grid Background="beige" Margin="55,-78,0,0" >
-
-        <Image Source="/Assets/pozadina3.jpg" Stretch="UniformToFill" Margin="0,0,0,0" />
+    <Grid Margin="55,-78,0,0">
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/pozadina3.jpg"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
         
-     
-        <GridView Margin="55, 0, 0, 0" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <GridView Grid.Row="1" Grid.Column="1">
 
-            <data:RegistracijaKontrola Margin=" 0, 50, 200, -15"  HorizontalAlignment="Left"  Loaded="RegistracijaKontrola_Loaded"/>
+            <data:RegistracijaKontrola HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Loaded="RegistracijaKontrola_Loaded"/>
 
 
         </GridView>
