@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="HRentACar.HRentACar.Views.Prijava"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HRentACar.HRentACar.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="#FF9BD1CA" Margin="0,0,-344,0" >
+        <TextBox x:Name="mail" HorizontalAlignment="Left" Height="40" Margin="293,55,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="341"/>
+        <TextBox x:Name="sifra" HorizontalAlignment="Left" Height="40" Margin="293,105,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="341"/>
+
+        <TextBlock x:Name="maill" HorizontalAlignment="Left" FontSize="25" Height="40" Margin="59,55,0,0" TextWrapping="Wrap" Text="Email :" VerticalAlignment="Top" Width="173"/>
+        <TextBlock x:Name="sifral" HorizontalAlignment="Left" FontSize="25" Height="40" Margin="59,105,0,0" TextWrapping="Wrap" Text="Sifra :" VerticalAlignment="Top" Width="173"/>
+        <Button x:Name="prijaviSe" Content="Prijavi se" FontSize="30" HorizontalAlignment="Left" Height="69" Margin="366,205,0,0" VerticalAlignment="Top" Width="268" Click="prijaviSe_Click"/>
+
+    </Grid>
+</Page>
