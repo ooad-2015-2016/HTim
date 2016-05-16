@@ -7,16 +7,88 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="#FF9BD1CA" Margin="0,0,-225,0">
+    <Grid Background="Beige" Margin="0,0,-225,0">
         <Grid.RowDefinitions>
-            <RowDefinition Height="45"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <TextBlock x:Name="blok" HorizontalAlignment="Left" Height="133" Margin="56,10,0,0" Grid.Row="1" TextWrapping="Wrap"  FontSize ="70" Text="Dobrodošli!" VerticalAlignment="Top" Width="555" />
-        <Button x:Name="button" Content="Prijavi se" FontSize ="50" HorizontalAlignment="Left" Height="88" Margin="107,203,0,0" Grid.Row="1" VerticalAlignment="Top" Width="365" Click="button_Click"/>
-        <Button x:Name="button1" Content="Registruj se" FontSize ="50" HorizontalAlignment="Left" Height="102" Margin="107,348,0,0" Grid.Row="1" VerticalAlignment="Top" Width="365"/>
+
+        <RelativePanel>
+            <Button Name="PushDugme" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" FontSize="36" Click="PushDugme_Click">
+            </Button>
+        </RelativePanel>
+        
+        <Frame Name="mainContentFrame" Grid.Row="1"/>
+
+        <SplitView Name="MojView" 
+                   Grid.Row="1" 
+                   DisplayMode="CompactOverlay" 
+                   OpenPaneLength="200" 
+                   CompactPaneLength="56" 
+                   HorizontalAlignment="Left">
 
 
+
+          <SplitView.Pane>
+                <ListBox SelectionMode="Single" Name="IconsListBox" SelectionChanged="IconsListBox_SelectionChanged">
+
+
+                    <ListBoxItem Name="Pocetna">
+                        <StackPanel Orientation="Horizontal">
+
+                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE80F;" FontSize="36" />
+                            <TextBlock Text="Početna" FontSize="24" Margin="20, 0, 0, 0" />
+
+                        </StackPanel>
+                    </ListBoxItem>
+
+                    <ListBoxItem Name="Registracija">
+                        <StackPanel Orientation="Horizontal">
+
+                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE1E2;" FontSize="36" />
+                            <TextBlock Text="Registracija" FontSize="24" Margin="20, 0, 0, 0" />
+
+                        </StackPanel>
+                    </ListBoxItem>
+
+                    <ListBoxItem Name="Prijava">
+                        <StackPanel Orientation="Horizontal">
+
+                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE13D;" FontSize="36" />
+                            <TextBlock Text="Prijava" FontSize="24" Margin="20, 0, 0, 0" />
+
+                        </StackPanel>
+                    </ListBoxItem>
+
+                    <ListBoxItem Name="Pretraga">
+                        <StackPanel Orientation="Horizontal">
+
+                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE1A3;" FontSize="36" />
+                            <TextBlock Text="Pretraga" FontSize="24"  Margin="20, 0, 0, 0" />
+
+                        </StackPanel>
+                    </ListBoxItem>
+
+                    <ListBoxItem Name="iNFO">
+                        <StackPanel Orientation="Horizontal">
+
+                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE11B;" FontSize="36" />
+                            <TextBlock Text="iNFO" FontSize="24"  Margin="20, 0, 0, 0" />
+
+                        </StackPanel>
+                    </ListBoxItem>
+
+                </ListBox>
+
+            </SplitView.Pane>
+
+            <SplitView.Content>
+                <TextBlock Name="rezultat" />
+            </SplitView.Content>
+            
+        </SplitView>
+
+       
 
     </Grid>
 </Page>

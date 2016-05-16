@@ -5,54 +5,49 @@
     xmlns:local="using:HRentACar.HRentACar.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:data="using:HRentACar.HRentACar.Models"
-    xmlns:vjuvz ="using:HRentACar.HRentACar.Views"
-
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    xmlns:data="using:HRentACar.HRentACar.Views.Kontrole"
+    xmlns:modeli="using:HRentACar.HRentACar.Models">
     
 
-
-    <Grid Background="#FF9BD1CA" Margin="0,0,-762,-407">
-        
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="55, -78, 0, 0">
         <ScrollViewer Grid.Row="1" 
 			Grid.Column="0"
 			Grid.ColumnSpan="6"
 			Background="Transparent" 
-			Margin="0, 5, 0 , 0"
+			Margin="-30, 5, 0 , 0"
 			HorizontalScrollBarVisibility="Disabled"
 			VerticalScrollBarVisibility="Auto">
 
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition x:Name="gridRowHeightTemplate" Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
+            <RowDefinition x:Name="gridRowHeightTemplate" Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition x:Name="gridColumnWidthTemplate" Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Name="gridColumnWidthTemplate" Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
-             <GridView Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="4" ItemsSource="{x:Bind Products}" ItemClick="GridView_ItemClick">
+                <GridView Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="4" ItemsSource="{x:Bind vozila}"  ItemClick="GridView_ItemClick_1">
+            <GridView.ItemTemplate>
+                <DataTemplate x:DataType="modeli:Vozilo">
+                    <data:VoziloDetalji
+                               Height="520"
+                                Width="650"/>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
 
-                    <GridView.ItemTemplate>
-                        <DataTemplate x:DataType="data:Vozilo">
-                            <vjuvz:VoziloDetalji
-                                Height="300" 
-                                Width="216.2"/>
-                        </DataTemplate>
-                    </GridView.ItemTemplate>
-
-                </GridView>
 
             </Grid>
         </ScrollViewer>
-
     </Grid>
 </Page>

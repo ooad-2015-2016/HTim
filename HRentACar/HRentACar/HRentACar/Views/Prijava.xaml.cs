@@ -27,9 +27,10 @@ namespace HRentACar.HRentACar.Views
             this.InitializeComponent();
         }
 
-        private void prijaviSe_Click(object sender, RoutedEventArgs e)
+
+        private void LogIn_Loaded(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Katalog));
+
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using HRentACar.HRentACar.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -12,16 +11,14 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using HRentACar.HRentACar.Models;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
+// The User Control item template is documented at http://go.microsoft.com/fwlink/?LinkId=234236
 
-namespace HRentACar.HRentACar.Views
+namespace HRentACar.HRentACar.Views.Kontrole
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
-    public sealed partial class VoziloDetalji : Page
+    public sealed partial class VoziloDetalji : UserControl
     {
         public Vozilo Vozilo { get { return this.DataContext as Vozilo; } }
 
@@ -30,5 +27,6 @@ namespace HRentACar.HRentACar.Views
             this.InitializeComponent();
             this.DataContextChanged += (s, e) => Bindings.Update();
         }
+
     }
 }

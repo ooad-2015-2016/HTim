@@ -106,8 +106,20 @@
     <Compile Include="HRentACar\Models\Uposlenik.cs" />
     <Compile Include="HRentACar\Models\Vozac.cs" />
     <Compile Include="HRentACar\Models\Vozilo.cs" />
+    <Compile Include="HRentACar\Views\info.xaml.cs">
+      <DependentUpon>info.xaml</DependentUpon>
+    </Compile>
     <Compile Include="HRentACar\Views\Katalog.xaml.cs">
       <DependentUpon>Katalog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HRentACar\Views\Kontrole\LogIn.xaml.cs">
+      <DependentUpon>LogIn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HRentACar\Views\Kontrole\RegistracijaKontrola.xaml.cs">
+      <DependentUpon>RegistracijaKontrola.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HRentACar\Views\Kontrole\VoziloDetalji.xaml.cs">
+      <DependentUpon>VoziloDetalji.xaml</DependentUpon>
     </Compile>
     <Compile Include="HRentACar\Views\Pocetna.xaml.cs">
       <DependentUpon>Pocetna.xaml</DependentUpon>
@@ -117,9 +129,6 @@
     </Compile>
     <Compile Include="HRentACar\Views\Registracija.xaml.cs">
       <DependentUpon>Registracija.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="HRentACar\Views\VoziloDetalji.xaml.cs">
-      <DependentUpon>VoziloDetalji.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -135,12 +144,20 @@
   <ItemGroup>
     <Content Include="Assets\Automobili\audi-a8.jpg" />
     <Content Include="Assets\Automobili\bmw-x5.jpg" />
+    <Content Include="Assets\Automobili\buba.jpg" />
     <Content Include="Assets\Automobili\Golf gti.jpg" />
     <Content Include="Assets\Automobili\hyundai.jpg" />
     <Content Include="Assets\Automobili\Mercedes-Benz S.jpg" />
     <Content Include="Assets\Automobili\mini-cooper.jpg" />
     <Content Include="Assets\Automobili\q3.png" />
     <Content Include="Assets\Automobili\renault-megane.jpg" />
+    <Content Include="Assets\Automobili\vw-kombi.jpg" />
+    <Content Include="Assets\Automobili\yugo.jpg" />
+    <Content Include="Assets\background3.jpg" />
+    <Content Include="Assets\info.png" />
+    <Content Include="Assets\pocetna.jpg" />
+    <Content Include="Assets\pozadina2.jpg" />
+    <Content Include="Assets\pozadina3.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -155,7 +172,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="HRentACar\Views\info.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="HRentACar\Views\Katalog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HRentACar\Views\Kontrole\LogIn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HRentACar\Views\Kontrole\RegistracijaKontrola.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HRentACar\Views\Kontrole\VoziloDetalji.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -168,10 +201,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="HRentACar\Views\Registracija.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="HRentACar\Views\VoziloDetalji.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

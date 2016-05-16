@@ -20,16 +20,11 @@ namespace HRentACar.HRentACar.Views
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Registracija : Page
+    public sealed partial class info : Page
     {
-        public Registracija()
+        public info()
         {
             this.InitializeComponent();
-        }
-
-        private void RegistracijaKontrola_Loaded(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
