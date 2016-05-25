@@ -14,7 +14,7 @@ Platform assembly: C:\Users\Selmir Hasanovic\Google Drive\ETF\OOAD\HTim\Igrica\D
 Loading C:\Users\Selmir Hasanovic\Google Drive\ETF\OOAD\HTim\Igrica\DeDžir_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\Selmir Hasanovic\Google Drive\ETF\OOAD\HTim\Igrica\DeDžir_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\Selmir Hasanovic\Google Drive\ETF\OOAD\HTim\Igrica\DeDžir_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.258 seconds
+- Completed reload, in  0.173 seconds
 Platform assembly: C:\Users\Selmir Hasanovic\Google Drive\ETF\OOAD\HTim\Igrica\DeDžir_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Selmir Hasanovic\Google Drive\ETF\OOAD\HTim\Igrica\DeDžir_Data\Managed\System.dll (this message is harmless)
 desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
@@ -22,3 +22,22 @@ desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
 <RI> Input initialized.
 <RI> Initialized touch support.
+UnloadTime: 1.670308 ms
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 21.361021 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 231.
+Total: 0.574768 ms (FindLiveObjects: 0.056673 ms CreateObjectMapping: 0.037931 ms MarkObjects: 0.455619 ms  DeleteObjects: 0.023204 ms)
+
+Highscore must be instantiated using the ScriptableObject.CreateInstance method instead of new Highscore.
+ 
+(Filename:  Line: 549)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.268684 ms
+
+Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 203.
+Total: 0.636350 ms (FindLiveObjects: 0.046856 ms CreateObjectMapping: 0.033914 ms MarkObjects: 0.508723 ms  DeleteObjects: 0.045517 ms)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 17b8 -> priority: 1 

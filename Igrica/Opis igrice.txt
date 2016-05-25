@@ -1,0 +1,2 @@
+DeDžir je igrica koja omoguæava igraèu da skuplja poene kreæuæi se automobilom u oznaèenom polju. Igraè gubi život nakon udara u jednu od granica polja ili nakon što pokupi bombu.
+Nakon svake partije ažurira se highscore tako da igraè može vidjeti svoj najbolji rezultat u toku jedne igre.
