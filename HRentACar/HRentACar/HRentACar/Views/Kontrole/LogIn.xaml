@@ -5,13 +5,50 @@
     xmlns:local="using:HRentACar.HRentACar.Views.Kontrole"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Width="304.939" Height="170.084">
+    mc:Ignorable="d"
+    Height="150"
+    Width="230">
 
-    <Grid Background="White" Margin="0,0,25,0">
+    <UserControl.Resources>
 
-        <TextBox Background="White" x:Name="mail" HorizontalAlignment="Left" Height="21" Margin="25,10,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="230"/>
-        <TextBox Background="White"  x:Name="sifra" HorizontalAlignment="Left" Height="21" Margin="25,48,0,0" TextWrapping="Wrap" Text="Sifra" VerticalAlignment="Top" Width="230"/>
-        <Button  x:Name="prijaviSe" Content="Prijavi se" FontSize="18" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="131" Margin="124,103,0,0" />
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="WhiteSmoke" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="FontSize" Value="15" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="12" Background="{TemplateBinding Background}" Width="Auto">
+                            <Grid>
+                                <ContentPresenter x:Name="MyContentPresenter" Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" />
+                            </Grid>
+                        </Border>
+
+
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+    </UserControl.Resources>
+
+
+
+    <Grid Background="Transparent">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+
+        <TextBox Grid.Row="0" Background="White" x:Name="mail" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="230" GotFocus="mail_GotFocus"/>
+        <PasswordBox Grid.Row="2" Background="White"  x:Name="sifra" HorizontalAlignment="Left" Password="Sifra" VerticalAlignment="Top" Width="230" GotFocus="sifra_GotFocus"/>
+        <Button  Grid.Row="4" x:Name="prijaviSe" Content="Prijavi se" FontSize="16" HorizontalAlignment="Right" Height="34" VerticalAlignment="Center" Width="131" Click="prijaviSe_Click"  />
 
     </Grid>
+        
 </UserControl>

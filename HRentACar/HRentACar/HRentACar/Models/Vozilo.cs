@@ -1,19 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace HRentACar.HRentACar.Models
 {
+ 
     public class Vozilo
     {
-        private int voziloID;
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+
+        private int voziloId;
         private string naziv;
         private string godiste;
         private bool dostupnost;
         private double cijena;
         private string opis;
+        private List<string> slike;
 
         public string Naziv
         {
@@ -67,16 +72,16 @@ namespace HRentACar.HRentACar.Models
             }
         }
 
-        public int VoziloID
+        public int VoziloId
         {
             get
             {
-                return voziloID;
+                return voziloId;
             }
 
             set
             {
-                voziloID = value;
+                voziloId = value;
             }
         }
 
@@ -93,39 +98,71 @@ namespace HRentACar.HRentACar.Models
             }
         }
 
-        public Vozilo(int id, string naziv, string godiste,  double cijena, string opis, bool dostupnost)
+        public List<string> Slike
         {
-            voziloID = id;
+            get
+            {
+                return slike;
+            }
+
+            set
+            {
+                slike = value;
+            }
+        }
+
+        public Vozilo(int id, string naziv, string godiste,  double cijena, List<string> slike, string opis, bool dostupnost)
+        {
+            voziloId = id;
             this.naziv = naziv;
             this.godiste = godiste;
             this.cijena = cijena;
             this.opis = opis;
+            this.slike = slike;                
             this.dostupnost = dostupnost;
 
         }
+
+        public Vozilo () { }
+
+        public void dodajOpis()
+        {
+            Opis = Naziv + "\n" + "Godište: " + Godiste + "\n" + "Automobil je noviji, uredno održavan, prihvatljive cijene. Idealan je za porodice s djecom, ali i za samce.\n" +
+                "Cijena: " + Cijena + " KM po danu.";
+        }
+
     }
 
     public class KatalogVozila
     {
         public static List<Vozilo> vozila { get; set; }
 
+
+
         public static List<Vozilo> vratiSvaVozila()
         {
-            return new List<Vozilo>()
-            {
-                new Vozilo(1, "Volkswagen Kombi", "1992", 70, "ms-appx:///Assets/Automobili/vw-kombi.jpg", true),
-                new Vozilo(2, "BMW X5", "2010", 50, "ms-appx:///Assets/Automobili/bmw-x5.jpg", true),
-                new Vozilo(3, "Golf GTI", "2014", 65, "ms-appx:///Assets/Automobili/Golf gti.jpg", true),
-                new Vozilo(4, "Hyundai ix35", "2011", 80, "ms-appx:///Assets/Automobili/hyundai.jpg", true),
-                new Vozilo(5, "Mercedes Benz S Klasse", "2012", 90, "ms-appx:///Assets/Automobili/Mercedes-benz S.jpg", true),
-                new Vozilo(6, "Mini Cooper", "2015", 40, "ms-appx:///Assets/Automobili/mini-cooper.jpg", true),
-                new Vozilo(7, "Renault Megane", "2013", 75, "ms-appx:///Assets/Automobili/renault-megane.jpg", true),
-                new Vozilo(8, "Yugo 45", "1984", 120, "ms-appx:///Assets/Automobili/yugo.jpg", true),
-                new Vozilo(9, "Audi Q3", "2014", 100, "ms-appx:///Assets/Automobili/q3.png", true),
-                new Vozilo(10, "Volkswagen Beetle ", "2010", 55, "ms-appx:///Assets/Automobili/buba.jpg", true),
-                new Vozilo(11, "Audi A8", "2013", 60 , "ms-appx:///Assets/Automobili/audi-a8.jpg", true)
+            List<Vozilo> vozila = new List<Vozilo>();
 
-            };
+            vozila.Add(new Vozilo(1, "Mercedes Benz C220", "2016", 110, new List<string> { "ms-appx:///Assets/Mercedes Benz C220/prva.jpg", "ms-appx:///Assets/C220/druga.jpg", "ms-appx:///Assets/C220/treca.jpg" }, "opis", true));
+            vozila.Add(new Vozilo(2, "BMW 650i", "2015", 95, new List<string> { "ms-appx:///Assets/BMW 650i/prva.jpg", "ms-appx:///Assets/BMW/druga.jpg", "ms-appx:///Assets/BMW/treca.jpg" }, "opis", true));
+            vozila.Add(new Vozilo(3, "Lancia", "2014", 65, new List<string> { "ms-appx:///Assets/Lancia/prva.jpg", "ms-appx:///Assets/Lancia/druga.jpg", "ms-appx:///Assets/Lancia/treca.jpg" }, "opis", true));
+            vozila.Add(new Vozilo(4, "Peugeot 307", "2009", 50, new List<string> { "ms-appx:///Assets/Peugeot 307/prva.jpg", "ms-appx:///Assets/307/druga.jpg", "ms-appx:///Assets/307/treca.jpg" }, "opis", true));
+            vozila.Add(new Vozilo(5, "Mini Cooper", "2015", 40, new List<string> { "ms-appx:///Assets/Mini Cooper/prva.jpg", "ms-appx:///Assets/Mini Cooper/druga.jpg", "ms-appx:///Assets/Mini Cooper/treca.jpg" }, "opis", true));
+            vozila.Add(new Vozilo(6, "Renault Megane", "2013", 75, new List<string> { "ms-appx:///Assets/Renault Megane/prva.jpg" }, "opis", true));
+            vozila.Add(new Vozilo(7, "Audi Q3", "2014", 100, new List<string> { "ms-appx:///Assets/Audi Q3/prva.jpg" }, "opis", true));
+            vozila.Add(new Vozilo(8, "Volkswagen Beetle", "1970", 55, new List<string> { "ms-appx:///Assets/Volkswagen Beetle/prva.jpg" }, "opis", true));
+            vozila.Add(new Vozilo(9, "Volkswagen Kombi", "1992", 70, new List<string> { "ms-appx:///Assets/Automobili/vw-kombi.jpg" }, "opis", true));
+
+            for (int i = 0; i < vozila.Count; i++)
+            {
+                vozila[i].dodajOpis();
+            }
+
+            return vozila;
+
         }
+
+       
+            
     }
 }

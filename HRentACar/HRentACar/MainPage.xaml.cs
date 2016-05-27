@@ -27,6 +27,7 @@ namespace HRentACar
         {
             this.InitializeComponent();
             mainContentFrame.Navigate(typeof(Pocetna));
+            nazad.Visibility = Visibility.Collapsed;
         }
 
    
@@ -39,23 +40,37 @@ namespace HRentACar
         {
             if(Pretraga.IsSelected)
             {
+                nazad.Visibility = Visibility.Visible;
                 mainContentFrame.Navigate(typeof(Katalog));
             }
             else if (Registracija.IsSelected)
             {
+                nazad.Visibility = Visibility.Collapsed;
                 mainContentFrame.Navigate(typeof(Registracija));
             }
             else if (Pocetna.IsSelected)
             {
-                mainContentFrame.Navigate(typeof(Pocetna));
+                nazad.Visibility = Visibility.Collapsed;
+                mainContentFrame.Navigate(typeof(KorisniciListView));
             }
             else if (iNFO.IsSelected)
             {
+                nazad.Visibility = Visibility.Collapsed;
                 mainContentFrame.Navigate(typeof(info));
             }
             else if(Prijava.IsSelected)
             {
+                nazad.Visibility = Visibility.Collapsed;
                 mainContentFrame.Navigate(typeof(Prijava));
+                stekpenl.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void nazad_Click(object sender, RoutedEventArgs e)
+        {
+             if(mainContentFrame.CanGoBack)
+            {
+                mainContentFrame.GoBack();
             }
         }
     }

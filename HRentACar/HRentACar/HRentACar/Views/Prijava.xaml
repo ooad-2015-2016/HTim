@@ -6,15 +6,31 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:data="using:HRentACar.HRentACar.Views.Kontrole"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+>
 
-    <Grid Background="beige" Margin="55,0,0,0" >
+    <Grid Margin="55, 0, 0, 0" >
 
-        <Image Source="/Assets/pozadina2.jpg" Height="Auto" Width="Auto" Stretch="UniformToFill" Margin="0,-78,0,0" />
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/pozadina2.jpg" Opacity="0.66"/>
 
-        <GridView Margin="55, 0, 0, 0">
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+
+        <GridView Grid.Row="1" Grid.Column="1">
             
-            <data:LogIn  Margin="50, 50, 430, 280" Loaded="LogIn_Loaded"/>
+            <data:LogIn Loaded="LogIn_Loaded"/>
 
 
         </GridView>

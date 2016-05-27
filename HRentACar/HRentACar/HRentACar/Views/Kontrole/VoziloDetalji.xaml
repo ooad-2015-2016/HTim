@@ -5,25 +5,23 @@
     xmlns:local="using:HRentACar.HRentACar.Views.Kontrole"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    d:DesignHeight="300"
-    d:DesignWidth="400">
+    mc:Ignorable="d" Width="563.397" Height="552.061">
 
-    <Grid>
+    <Grid Background="Transparent">
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="5*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="0.7*"/>
             <RowDefinition Height="14"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="3*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="0.25*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="0.25*"/>
         </Grid.ColumnDefinitions>
 
-        <Image Name="Slika" Source="{x:Bind Vozilo.Opis}" Grid.Row="1" Grid.Column="1" RenderTransformOrigin="1,1"/>
+        <Image Name="Slika" Source="{x:Bind Vozilo.Slike[0]}" Grid.Row="1" Grid.Column="1" Height="300" Width="370" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
         <TextBlock Name="Naziv" Text="{x:Bind Vozilo.Naziv}" FontFamily="Roboto Regular" Foreground="#767c83" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1"/>
 

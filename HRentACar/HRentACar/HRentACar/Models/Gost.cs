@@ -8,5 +8,6 @@ namespace HRentACar.HRentACar.Models
 {
     public class Gost : Korisnik
     {
+
     }
 }

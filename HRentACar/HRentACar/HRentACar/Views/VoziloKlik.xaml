@@ -1,0 +1,100 @@
+﻿<Page
+    x:Class="HRentACar.HRentACar.Views.VoziloKlik"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HRentACar.HRentACar.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:modeli="using:HRentACar.HRentACar.Models"
+    xmlns:auto="Vozilo"
+    >
+
+
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#373737" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontSize" Value="15" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="12" Background="{TemplateBinding Background}" Width="Auto">
+                            <Grid>
+                                <ContentPresenter x:Name="MyContentPresenter" Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" />
+                            </Grid>
+                        </Border>
+
+
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </Page.Resources>
+
+    <Grid Name="grid" Background="WhiteSmoke" Margin="-70,0,-414,0" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.7*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Column="0" 
+                   Grid.Row="1" 
+                   Name="nazivAuta" 
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Bottom" 
+                   FontSize="45" 
+                   FontStyle="Italic" 
+                   FontFamily="Calibri" 
+                   Text="Automobil"/>
+
+        <FlipView Name="slikeAutomobila" 
+                  Grid.Row="2" Grid.Column="0"
+                  Width="550" Height="550"
+                  Background="WhiteSmoke">
+            <FlipView.ItemTemplate>
+                <DataTemplate>
+                    <Image Grid.Row="2" Height="550" Width="550" Source="{Binding Slika}"  
+                  HorizontalAlignment="Center" 
+                  VerticalAlignment="Center"/>
+                </DataTemplate>
+            </FlipView.ItemTemplate>
+        </FlipView>
+
+        <TextBlock Grid.Row="2" 
+                   Grid.Column="1"
+                   Name="opisAuta"
+                     HorizontalAlignment="Left"
+                   VerticalAlignment="Center"
+                   FontSize="22" 
+                   FontFamily="Calibri" 
+                   TextAlignment="Justify"
+                   TextWrapping="Wrap"
+                   Text="OVO JE OPIS NEKOG AUTA. NESTO SE DESAVA, DOBROO AUTO VOPRA NECETE SE POKAJATI HAOS ZNACI.  MUNJA PRAVAA."
+                   Margin="-150,83,0,105" Height="292"
+                   Width="269" 
+                 
+                   />
+
+        <Button Name="rezervisi"
+                Grid.Row="2"
+                Grid.Column="1"
+                Background="DarkGray"
+                VerticalAlignment="Bottom"
+                Height="50"
+                Width="150"
+                FontFamily="Calibri"
+                Content="Rezerviši"
+                FontSize="30" Margin="9.667,0,0,59" 
+                Click="rezervisi_Click"
+                />
+    </Grid>
+</Page>

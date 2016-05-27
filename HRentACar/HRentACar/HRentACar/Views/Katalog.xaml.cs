@@ -31,11 +31,9 @@ namespace HRentACar.HRentACar.Views
             this.InitializeComponent();
             ShopWindowCollection = new ObservableCollection<Vozilo>();
 
-            // noobs
             vozila = KatalogVozila.vratiSvaVozila();
         }
 
-        // Kolekcija proizvoda koja predstavlja "izlog prodavnice", dakle sadrži sve proizvode koje trenutno posjedujemo
         public ObservableCollection<Vozilo> ShopWindowCollection { get; set; }
 
 
@@ -47,7 +45,9 @@ namespace HRentACar.HRentACar.Views
        
         private void GridView_ItemClick_1(object sender, ItemClickEventArgs e)
         {
-            this.Frame.Navigate(typeof(Prijava));
+            Vozilo auto = ((Vozilo)e.ClickedItem);
+
+           this.Frame.Navigate(typeof(VoziloKlik), auto);
         }
     }
 }

@@ -5,39 +5,49 @@
     xmlns:local="using:HRentACar"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+   >
 
-    <Grid Background="Beige" Margin="0,0,-225,0">
+    <Grid Background="WhiteSmoke" Margin="0,0,0,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <RelativePanel>
-            <Button Name="PushDugme" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" FontSize="36" Click="PushDugme_Click">
+        <RelativePanel Background="WhiteSmoke">
+            <Button Name="PushDugme" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" FontSize="30" Click="PushDugme_Click">
+
             </Button>
+            <Button Name="nazad" FontFamily="Segoe MDL2 Assets" Content="&#xE0A6;" RelativePanel.RightOf="PushDugme" FontSize="36" Background="WhiteSmoke" Click="nazad_Click">
+
+            </Button>
+
+            <StackPanel Name="stekpenl" HorizontalAlignment="Right" VerticalAlignment="Center" Orientation="Horizontal" Margin="0,0,-357,-18" Height="38" Width="250">
+                <TextBlock Name="ime" Text="Rent-A-Car De Džir" FontStyle="Italic" TextWrapping="Wrap" Width="190" FontFamily="Calibri" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,9"/>
+                <Image Name="slika" Source="ms-appx:///Assets/rent.jpg" HorizontalAlignment="Right"  Width="45"/>
+            </StackPanel>
+
         </RelativePanel>
-        
+
         <Frame Name="mainContentFrame" Grid.Row="1"/>
 
         <SplitView Name="MojView" 
                    Grid.Row="1" 
                    DisplayMode="CompactOverlay" 
                    OpenPaneLength="200" 
-                   CompactPaneLength="56" 
-                   HorizontalAlignment="Left">
+                   CompactPaneLength="50" 
+                   HorizontalAlignment="Left" Width="185">
 
 
 
-          <SplitView.Pane>
+            <SplitView.Pane>
                 <ListBox SelectionMode="Single" Name="IconsListBox" SelectionChanged="IconsListBox_SelectionChanged">
 
 
-                    <ListBoxItem Name="Pocetna">
+                    <ListBoxItem Name="Pocetna" Width="202">
                         <StackPanel Orientation="Horizontal">
-
-                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE80F;" FontSize="36" />
-                            <TextBlock Text="Početna" FontSize="24" Margin="20, 0, 0, 0" />
+                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE80F;" FontSize="30" Height="36" Width="33" />
+                            <TextBlock Text="Početna" FontSize="22" Margin="20, 0, 0, 0" />
 
                         </StackPanel>
                     </ListBoxItem>
@@ -45,8 +55,8 @@
                     <ListBoxItem Name="Registracija">
                         <StackPanel Orientation="Horizontal">
 
-                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE1E2;" FontSize="36" />
-                            <TextBlock Text="Registracija" FontSize="24" Margin="20, 0, 0, 0" />
+                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE1E2;" FontSize="30" />
+                            <TextBlock Text="Registracija" FontSize="22" Margin="20, 0, 0, 0" />
 
                         </StackPanel>
                     </ListBoxItem>
@@ -54,8 +64,8 @@
                     <ListBoxItem Name="Prijava">
                         <StackPanel Orientation="Horizontal">
 
-                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE13D;" FontSize="36" />
-                            <TextBlock Text="Prijava" FontSize="24" Margin="20, 0, 0, 0" />
+                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE13D;" FontSize="30" />
+                            <TextBlock Text="Prijava" FontSize="22" Margin="20, 0, 0, 0" />
 
                         </StackPanel>
                     </ListBoxItem>
@@ -63,8 +73,8 @@
                     <ListBoxItem Name="Pretraga">
                         <StackPanel Orientation="Horizontal">
 
-                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE1A3;" FontSize="36" />
-                            <TextBlock Text="Pretraga" FontSize="24"  Margin="20, 0, 0, 0" />
+                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE1A3;" FontSize="30" />
+                            <TextBlock Text="Pretraga" FontSize="22"  Margin="20, 0, 0, 0" />
 
                         </StackPanel>
                     </ListBoxItem>
@@ -72,8 +82,8 @@
                     <ListBoxItem Name="iNFO">
                         <StackPanel Orientation="Horizontal">
 
-                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE11B;" FontSize="36" />
-                            <TextBlock Text="iNFO" FontSize="24"  Margin="20, 0, 0, 0" />
+                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE11B;" FontSize="30" />
+                            <TextBlock Text="iNFO" FontSize="22"  Margin="20, 0, 0, 0" />
 
                         </StackPanel>
                     </ListBoxItem>
@@ -85,10 +95,12 @@
             <SplitView.Content>
                 <TextBlock Name="rezultat" />
             </SplitView.Content>
-            
+
         </SplitView>
 
-       
+
 
     </Grid>
 </Page>
+
+    

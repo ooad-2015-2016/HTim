@@ -12,7 +12,7 @@ namespace HRentACar.HRentACar.Models
         private bool punoljetnost;
         private string prebivaliste;
 
-        public RegistrovaniKlijent(int id, string i, string p, string s, string e, bool v, bool pu, string pr): base (id,i,p,s,e)
+        public RegistrovaniKlijent(int id, string i, string p, string s, string e, byte [] pic, bool v, bool pu, string pr): base (id,i,p,s,e, pic)
             {
             validnaVozackaDozvola = v;
             punoljetnost = pu;

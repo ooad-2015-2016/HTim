@@ -11,7 +11,7 @@ namespace HRentACar.HRentACar.Models
         private bool dostupan;
         private int provjera;
 
-        public Vozac (int id, string i, string p, string s, string e, int provjera, bool dostupan) : base(id, i, p, s, e, provjera)
+        public Vozac (int id, string i, string p, string s, string e, byte [] pic, int provjera, bool dostupan) : base(id, i, p, s, e, pic, provjera)
         {
             this.dostupan = dostupan;
         }

@@ -10,7 +10,7 @@ namespace HRentACar.HRentACar.Models
     {
         public List<Uposlenik> uposlenici { get; set; }
 
-        public Administrator(int id, string i, string p, string s, string e) : base(id, i, p, s, e)
+        public Administrator(int id, string i, string p, string s, string e, byte [] pic) : base(id, i, p, s, e, pic)
         {
             uposlenici = new List<Uposlenik>();
         }

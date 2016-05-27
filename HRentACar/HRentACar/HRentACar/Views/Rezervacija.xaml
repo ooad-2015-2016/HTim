@@ -1,0 +1,86 @@
+﻿<Page
+    x:Class="HRentACar.HRentACar.Rezervacija"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HRentACar.HRentACar"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#373737" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontSize" Value="15" />
+            <Setter Property="Width" Value="220"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="12" Background="{TemplateBinding Background}" Width="Auto">
+                            <Grid>
+                                <ContentPresenter x:Name="MyContentPresenter" Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" />
+                            </Grid>
+                        </Border>
+
+
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </Page.Resources>
+
+    <Grid Background="WhiteSmoke" Margin="55,0,-859,-86">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.6*"/>
+            <RowDefinition Height="0.35*"/>
+            <RowDefinition Height="0.8*"/>
+            <RowDefinition Height="0.7*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.4*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="13*" />
+            <ColumnDefinition Width="46*"/>
+            <ColumnDefinition Width="81*"/>
+            <ColumnDefinition Width="248*"/>
+
+        </Grid.ColumnDefinitions>
+
+
+        <TextBlock  Grid.Column="1" Grid.Row="1" Text="Želim rezervaciju od: "  FontFamily="Calibri" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.ColumnSpan="2" Height="24" Margin="0,0,0,0.333" Width="167"/>
+        <DatePicker  Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="36" Width="296" Grid.ColumnSpan="2" Margin="0,0,0,0.333" />
+        <DatePicker  Grid.Column="2" Grid.Row="2"  HorizontalAlignment="Left"  VerticalAlignment="Bottom" Grid.ColumnSpan="2" Height="32" Width="296"/>
+        <TextBlock  Grid.Column="1" Grid.Row="2" Text="Do: " HorizontalAlignment="Left" VerticalAlignment="Bottom" FontFamily="Calibri" FontSize="20" Height="24" Width="28"/>
+
+        <Button Name="provjeri" Content="Provjeri dostupnost"
+                 Grid.Column="2" Grid.Row="3" 
+                VerticalAlignment="Center"
+                HorizontalAlignment="Left"
+                Height="42"
+                FontFamily="Calibri"
+                FontSize="20" Margin="0,14,0,50.667"
+                />
+
+        <ComboBox x:Name="nacinPlacanja"  HorizontalAlignment="Left" Grid.Row="4" Grid.Column="2" VerticalAlignment="Bottom" Width="190" Height="32" Margin="0,0,0,0.333"/>
+        <TextBlock  Grid.Column="1" Grid.Row="4" Text="Način plaćanja: " HorizontalAlignment="Left" VerticalAlignment="Bottom" FontFamily="Calibri" FontSize="20" Height="24" Margin="0,0,0,0.333" Width="123"/>
+
+        <TextBlock  Grid.Column="1" Grid.Row="5" Text="Broj kartice: " HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Calibri" FontSize="20" Height="24" Margin="0,0,0,106.333" Grid.RowSpan="2" Width="98"/>
+        <TextBox  Grid.Column="2" Grid.Row="5" Text="" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Calibri" FontSize="20" Width="200" Height="36" Margin="0,0,0,106.333" Grid.RowSpan="2"/>
+
+        <Button Name="potvrdi" Content="Potvrdi rezervaciju"
+                 Grid.Column="3" Grid.Row="5" 
+                VerticalAlignment="Center"
+                HorizontalAlignment="Left"
+                Height="42"
+                Width="190"
+                FontFamily="Calibri"
+                FontSize="20" 
+                />
+    </Grid>
+</Page>

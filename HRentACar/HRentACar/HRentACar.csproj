@@ -99,16 +99,27 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="HRentACar\Models\Administrator.cs" />
+    <Compile Include="HRentACar\Models\DefaultPodaci.cs" />
     <Compile Include="HRentACar\Models\Gost.cs" />
+    <Compile Include="HRentACar\Models\KorisnikDbContext.cs" />
     <Compile Include="HRentACar\Models\RegistrovaniKlijent.cs" />
     <Compile Include="HRentACar\Models\Korisnik.cs" />
     <Compile Include="HRentACar\Models\Rezervacija.cs" />
     <Compile Include="HRentACar\Models\Uposlenik.cs" />
     <Compile Include="HRentACar\Models\Vozac.cs" />
     <Compile Include="HRentACar\Models\Vozilo.cs" />
+    <Compile Include="HRentACar\Models\VoziloDbContext.cs" />
+    <Compile Include="HRentACar\Views\KorisniciListView.xaml.cs">
+      <DependentUpon>KorisniciListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HRentACar\Views\PictureConverter.cs" />
+    <Compile Include="HRentACar\Views\Rezervacija.xaml.cs">
+      <DependentUpon>Rezervacija.xaml</DependentUpon>
+    </Compile>
     <Compile Include="HRentACar\Views\info.xaml.cs">
       <DependentUpon>info.xaml</DependentUpon>
     </Compile>
+    <Compile Include="HRentACar\Models\Item.cs" />
     <Compile Include="HRentACar\Views\Katalog.xaml.cs">
       <DependentUpon>Katalog.xaml</DependentUpon>
     </Compile>
@@ -130,9 +141,17 @@
     <Compile Include="HRentACar\Views\Registracija.xaml.cs">
       <DependentUpon>Registracija.xaml</DependentUpon>
     </Compile>
+    <Compile Include="HRentACar\Views\VoziloKlik.xaml.cs">
+      <DependentUpon>VoziloKlik.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20160527001743_KorisnikMigration.cs" />
+    <Compile Include="Migrations\20160527001743_KorisnikMigration.designer.cs">
+      <DependentUpon>20160527001743_KorisnikMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\KorisnikDbContextModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -142,6 +161,12 @@
     <None Include="HRentACar_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Audi Q3\druga.jpg" />
+    <Content Include="Assets\Audi Q3\prva.jpg" />
+    <Content Include="Assets\Audi Q3\treca.jpg" />
+    <Content Include="Assets\Peugeot 307\druga.jpg" />
+    <Content Include="Assets\Peugeot 307\prva.jpg" />
+    <Content Include="Assets\Peugeot 307\treca.jpg" />
     <Content Include="Assets\Automobili\audi-a8.jpg" />
     <Content Include="Assets\Automobili\bmw-x5.jpg" />
     <Content Include="Assets\Automobili\buba.jpg" />
@@ -154,10 +179,34 @@
     <Content Include="Assets\Automobili\vw-kombi.jpg" />
     <Content Include="Assets\Automobili\yugo.jpg" />
     <Content Include="Assets\background3.jpg" />
+    <Content Include="Assets\BMW 650i\druga.jpg" />
+    <Content Include="Assets\BMW 650i\prva.jpg" />
+    <Content Include="Assets\BMW 650i\treca.jpg" />
+    <Content Include="Assets\Mercedes Benz C220\druga.jpg" />
+    <Content Include="Assets\Mercedes Benz C220\prva.jpg" />
+    <Content Include="Assets\Mercedes Benz C220\treca.jpg" />
+    <Content Include="Assets\Golf GTI\druga.png" />
+    <Content Include="Assets\Golf GTI\prva.png" />
     <Content Include="Assets\info.png" />
+    <Content Include="Assets\Lancia\druga.jpg" />
+    <Content Include="Assets\Lancia\prva.jpg" />
+    <Content Include="Assets\Lancia\treca.jpg" />
+    <Content Include="Assets\Mercedes Benz\druga.jpg" />
+    <Content Include="Assets\Mercedes Benz\prva.jpg" />
+    <Content Include="Assets\Mercedes Benz\treca.jpg" />
+    <Content Include="Assets\Mini Cooper\druga.jpg" />
+    <Content Include="Assets\Mini Cooper\prva.jpg" />
+    <Content Include="Assets\Mini Cooper\treca.jpg" />
     <Content Include="Assets\pocetna.jpg" />
     <Content Include="Assets\pozadina2.jpg" />
     <Content Include="Assets\pozadina3.jpg" />
+    <Content Include="Assets\Renault Megane\druga.jpg" />
+    <Content Include="Assets\Renault Megane\prva.jpg" />
+    <Content Include="Assets\Renault Megane\treca.jpg" />
+    <Content Include="Assets\rent.jpg" />
+    <Content Include="Assets\Volkswagen Beetle\druga.jpg" />
+    <Content Include="Assets\Volkswagen Beetle\prva.jpg" />
+    <Content Include="Assets\Volkswagen Beetle\treca.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -172,6 +221,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="HRentACar\Views\KorisniciListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HRentACar\Views\Rezervacija.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="HRentACar\Views\info.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -201,6 +258,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="HRentACar\Views\Registracija.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HRentACar\Views\VoziloKlik.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
