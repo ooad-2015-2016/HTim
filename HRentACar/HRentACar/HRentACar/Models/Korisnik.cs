@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,8 @@ namespace HRentACar.HRentACar.Models
         private string prezime;
         private string sifra;
         private string email;
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
         public byte[] Slika { get; set; }
 

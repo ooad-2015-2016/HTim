@@ -32,6 +32,12 @@ namespace HRentACar.HRentACar.Views.Kontrole
         private bool ima;
         private string porukaValidacije;
 
+        private string imeV;
+        private string prezimeV;
+        private string mailV;
+        private string sifraV;
+        private string prebivalisteV;
+
         public string PorukaValidacije
         {
             get
@@ -46,6 +52,76 @@ namespace HRentACar.HRentACar.Views.Kontrole
             }
         }
 
+        public string ImeV
+        {
+            get
+            {
+                return imeV;
+            }
+
+            set
+            {
+                imeV = value;
+                OnPropertyChanged("ImeV");
+            }
+        }
+
+        public string PrezimeV
+        {
+            get
+            {
+                return prezimeV;
+            }
+
+            set
+            {
+                prezimeV = value;
+                OnPropertyChanged("PrezimeV");
+            }
+        }
+
+        public string MailV
+        {
+            get
+            {
+                return mailV;
+            }
+
+            set
+            {
+                mailV = value;
+                OnPropertyChanged("MailV");
+            }
+        }
+
+        public string SifraV
+        {
+            get
+            {
+                return sifraV;
+            }
+
+            set
+            {
+                sifraV = value;
+                OnPropertyChanged("SifraV");
+            }
+        }
+
+        public string PrebivalisteV
+        {
+            get
+            {
+                return prebivalisteV;
+            }
+
+            set
+            {
+                prebivalisteV = value;
+                OnPropertyChanged("PrebivalisteV");
+            }
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         private void OnPropertyChanged(String propertyName)
@@ -57,6 +133,8 @@ namespace HRentACar.HRentACar.Views.Kontrole
         public RegistracijaKontrola()
         {
             this.InitializeComponent();
+            Korisnik k = new Korisnik();
+            grid.DataContext = k;
         }
         
 
@@ -127,6 +205,7 @@ namespace HRentACar.HRentACar.Views.Kontrole
                     App.Mail = mail.Text;
 
                     ProfilKontrola profil = new ProfilKontrola(mail.Text.ToString());
+                    profil.OnPropertyChanged("Logovani");
                     //profil.Logovani = mail.Text.ToString();
 
                     //reset polja za unos
@@ -190,13 +269,13 @@ namespace HRentACar.HRentACar.Views.Kontrole
         {
             if (ime.Text.Length < 3)
             {
-                porukaValidacije = "Ime je prekratko!";
-                OnPropertyChanged("PorukaValidacije");
+                imeV = "Ime je prekratko!";
+                OnPropertyChanged("ImeV");
             }
             else
             {
-                porukaValidacije = "";
-                OnPropertyChanged("PorukaValidacije");
+                imeV = "";
+                OnPropertyChanged("ImeV");
             }
         }
 
@@ -204,13 +283,13 @@ namespace HRentACar.HRentACar.Views.Kontrole
         {
             if (prezime.Text.Length < 3)
             {
-                porukaValidacije = "Prezime je prekratko!";
-                OnPropertyChanged("PorukaValidacije");
+                prezimeV = "Prezime je prekratko!";
+                OnPropertyChanged("PrezimeV");
             }
             else
             {
-                porukaValidacije = "";
-                OnPropertyChanged("PorukaValidacije");
+                prezimeV = "";
+                OnPropertyChanged("PrezimeV");
             }
         }
 
@@ -220,13 +299,13 @@ namespace HRentACar.HRentACar.Views.Kontrole
             Match match = regx.Match(mail.Text);
             if (!match.Success)
             {
-                porukaValidacije = "Mail nije validan!";
-                OnPropertyChanged("PorukaValidacije");
+                mailV = "Mail nije validan!";
+                OnPropertyChanged("MailV");
             }
             else
             {
-                porukaValidacije = "";
-                OnPropertyChanged("PorukaValidacije");
+                mailV = "";
+                OnPropertyChanged("MailV");
             }
         }
 
@@ -234,13 +313,13 @@ namespace HRentACar.HRentACar.Views.Kontrole
         {
             if (sifra.Password.Length < 3)
             {
-                porukaValidacije = "Šifra je prekratka!";
-                OnPropertyChanged("PorukaValidacije");
+                sifraV = "Šifra je prekratka!";
+                OnPropertyChanged("SifraV");
             }
             else
             {
-                porukaValidacije = "";
-                OnPropertyChanged("PorukaValidacije");
+                sifraV = "";
+                OnPropertyChanged("SifraV");
             }
         }
 
@@ -248,13 +327,13 @@ namespace HRentACar.HRentACar.Views.Kontrole
         {
             if(!potvrda.Password.ToString().Equals(sifra.Password.ToString()))
             {
-                porukaValidacije = "Ne podudara se";
-                OnPropertyChanged("PorukaValidacije");
+                sifraV = "Unesene šifre nisu jednake!";
+                OnPropertyChanged("SifraV");
             }
             else
             {
-                porukaValidacije = "";
-                OnPropertyChanged("PorukaValidacije");
+                sifraV = "";
+                OnPropertyChanged("SifraV");
             }
         }
 
@@ -262,13 +341,13 @@ namespace HRentACar.HRentACar.Views.Kontrole
         {
             if (prebivaliste.Text.Length < 3)
             {
-                porukaValidacije = "Prebivaliste je prekratko!";
-                OnPropertyChanged("PorukaValidacije");
+                prebivalisteV = "Naziv je prekratak!";
+                OnPropertyChanged("PrebivalisteV");
             }
             else
             {
-                porukaValidacije = "";
-                OnPropertyChanged("PorukaValidacije");
+                prebivalisteV = "";
+                OnPropertyChanged("PrebivalisteV");
             }
         }
     }

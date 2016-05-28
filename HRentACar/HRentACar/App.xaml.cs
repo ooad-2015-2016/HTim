@@ -35,7 +35,7 @@ namespace HRentACar
             this.Suspending += OnSuspending;
 
             ImeLogIn = "Dobrodošli";
-            Mail = "JA 100 %";
+            Mail = "GOST";
 
             using (var db = new KorisnikDbContext())
             {

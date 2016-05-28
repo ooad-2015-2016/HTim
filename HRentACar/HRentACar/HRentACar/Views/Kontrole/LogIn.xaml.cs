@@ -55,8 +55,9 @@ namespace HRentACar.HRentACar.Views.Kontrole
                         App.ImeLogIn = korisnicii[i].Ime;
                         App.Mail = mail.Text;
 
-                        ProfilKontrola profil = new ProfilKontrola(mail.Text.ToString());
-                        //profil.OnPropertyChanged("Logovani");
+                        ProfilKontrola profil = new ProfilKontrola();
+                        profil.Logovani = App.Mail;
+                        profil.OnPropertyChanged("Logovani");
                         
                         //profil.Logovani = mail.Text.ToString();
 

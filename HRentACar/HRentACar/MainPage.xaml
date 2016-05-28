@@ -26,11 +26,11 @@
                     <TextBlock Name="rentACar"   Text="Rent a car" FontFamily="Calibri" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
                     <TextBlock Name="deDzir"  Text="DeDzir" FontFamily="Calibri" FontSize="18" Margin="0, 26, 0, 0" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
 
-                    <Image  Source="ms-appx:///Assets/rent.jpg" Height="50" Width="600" HorizontalAlignment="Left" Margin="150, 0, 0, 0"></Image>
+                    <Image  Source="ms-appx:///Assets/rent.jpg" Height="50" HorizontalAlignment="Left" Margin="150, 0, 0, 0"></Image>
 
                 </RelativePanel>
 
-                <data:ProfilKontrola x:Name="UserTab" korisnikClicked="korisnik_Clicked" HorizontalAlignment="Right" RelativePanel.RightOf="stekPenl" VerticalAlignment="Bottom" Height="50" Width="50"  Margin="0,0,-0.333,0" />
+                <data:ProfilKontrola x:Name="UserTab" korisnikClicked="korisnik_Clicked" HorizontalAlignment="Right" RelativePanel.RightOf="stekPenl" VerticalAlignment="Bottom" Height="50"  Margin="0,0,-0.333,0" />
 
         </RelativePanel>
 
