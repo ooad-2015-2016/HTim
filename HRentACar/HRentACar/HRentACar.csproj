@@ -109,7 +109,6 @@
     <Compile Include="HRentACar\Models\Vozac.cs" />
     <Compile Include="HRentACar\Models\Vozilo.cs" />
     <Compile Include="HRentACar\Models\VoziloDbContext.cs" />
-    <Compile Include="HRentACar\ViewModels\RegistracijaViewModel.cs" />
     <Compile Include="HRentACar\Views\Kontrole\ProfilKontrola.xaml.cs">
       <DependentUpon>ProfilKontrola.xaml</DependentUpon>
     </Compile>
@@ -278,7 +277,9 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="HRentACar\ViewModels\" />
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
