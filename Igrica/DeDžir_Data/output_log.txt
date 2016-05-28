@@ -2,42 +2,60 @@ Initialize engine version: 5.3.5f1 (960ebf59018a)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
-    Renderer: AMD Radeon HD 8600M Series (ID=0x6660)
-    Vendor:   ATI
-    VRAM:     1016 MB
+    Renderer: NVIDIA GeForce GT 740M   (ID=0x1292)
+    Vendor:   NVIDIA
+    VRAM:     1997 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\Selmir Hasanovic\Google Drive\ETF\OOAD\HTim\Igrica\DeDžir_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\Selmir Hasanovic\Google Drive\ETF\OOAD\HTim\Igrica\DeDžir_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\Selmir Hasanovic\Google Drive\ETF\OOAD\HTim\Igrica\DeDžir_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\Selmir Hasanovic\Google Drive\ETF\OOAD\HTim\Igrica\DeDžir_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\Selmir Hasanovic\Google Drive\ETF\OOAD\HTim\Igrica\DeDžir_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\Selmir Hasanovic\Google Drive\ETF\OOAD\HTim\Igrica\DeDžir_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\Selmir Hasanovic\Google Drive\ETF\OOAD\HTim\Igrica\DeDžir_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\Selmir Hasanovic\Google Drive\ETF\OOAD\HTim\Igrica\DeDžir_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.173 seconds
-Platform assembly: C:\Users\Selmir Hasanovic\Google Drive\ETF\OOAD\HTim\Igrica\DeDžir_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\Selmir Hasanovic\Google Drive\ETF\OOAD\HTim\Igrica\DeDžir_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\Sumeja\Desktop\projekat\hjbsk\Igrica\DeDžir_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Sumeja\Desktop\projekat\hjbsk\Igrica\DeDžir_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Sumeja\Desktop\projekat\hjbsk\Igrica\DeDžir_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Sumeja\Desktop\projekat\hjbsk\Igrica\DeDžir_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Sumeja\Desktop\projekat\hjbsk\Igrica\DeDžir_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Sumeja\Desktop\projekat\hjbsk\Igrica\DeDžir_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Sumeja\Desktop\projekat\hjbsk\Igrica\DeDžir_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Sumeja\Desktop\projekat\hjbsk\Igrica\DeDžir_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.906 seconds
+Platform assembly: C:\Users\Sumeja\Desktop\projekat\hjbsk\Igrica\DeDžir_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Sumeja\Desktop\projekat\hjbsk\Igrica\DeDžir_Data\Managed\System.dll (this message is harmless)
 desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initializing input.
 XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.670308 ms
+UnloadTime: 9.633398 ms
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 21.361021 ms
+UnloadTime: 15.703477 ms
 
 Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 231.
-Total: 0.574768 ms (FindLiveObjects: 0.056673 ms CreateObjectMapping: 0.037931 ms MarkObjects: 0.455619 ms  DeleteObjects: 0.023204 ms)
+Total: 0.299458 ms (FindLiveObjects: 0.027772 ms CreateObjectMapping: 0.019319 ms MarkObjects: 0.236669 ms  DeleteObjects: 0.014489 ms)
 
 Highscore must be instantiated using the ScriptableObject.CreateInstance method instead of new Highscore.
  
 (Filename:  Line: 549)
 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.268684 ms
+UnloadTime: 0.756495 ms
 
 Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 203.
-Total: 0.636350 ms (FindLiveObjects: 0.046856 ms CreateObjectMapping: 0.033914 ms MarkObjects: 0.508723 ms  DeleteObjects: 0.045517 ms)
+Total: 0.346551 ms (FindLiveObjects: 0.025961 ms CreateObjectMapping: 0.016904 ms MarkObjects: 0.278931 ms  DeleteObjects: 0.023546 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.690687 ms
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 197.
+Total: 0.374927 ms (FindLiveObjects: 0.031394 ms CreateObjectMapping: 0.022338 ms MarkObjects: 0.309722 ms  DeleteObjects: 0.009056 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.838001 ms
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 188.
+Total: 0.269875 ms (FindLiveObjects: 0.023546 ms CreateObjectMapping: 0.015093 ms MarkObjects: 0.223386 ms  DeleteObjects: 0.006641 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.600728 ms
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 197.
+Total: 0.399680 ms (FindLiveObjects: 0.030187 ms CreateObjectMapping: 0.019319 ms MarkObjects: 0.339909 ms  DeleteObjects: 0.009659 ms)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 17b8 -> priority: 1 
+  Thread -> id: 10c0 -> priority: 1 

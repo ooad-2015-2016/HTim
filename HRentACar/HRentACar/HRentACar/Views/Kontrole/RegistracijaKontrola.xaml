@@ -5,7 +5,7 @@
     xmlns:local="using:HRentACar.HRentACar.Views.Kontrole"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Height="470" Width="340"
+    mc:Ignorable="d" Height="470" Width="589"
     xmlns:vjuvz="using:HRentACar.HRentACar.Views"
     >
 
@@ -42,9 +42,9 @@
 
 
 
-        <TextBox x:Name="ime" HorizontalAlignment="Left" Height="21" Margin="180,20,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="152" />
-        <TextBox x:Name="prezime" HorizontalAlignment="Left" Height="21" Margin="180,60,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="152"/>
-        <TextBox x:Name="mail" HorizontalAlignment="Left" Height="21" Margin="180,100,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="152" />
+        <TextBox x:Name="ime" HorizontalAlignment="Left" Height="21" Margin="180,20,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="152" LostFocus="ime_LostFocus"/>
+        <TextBox x:Name="prezime" HorizontalAlignment="Left" Height="21" Margin="180,60,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="152" LostFocus="prezime_LostFocus"/>
+        <TextBox x:Name="mail" HorizontalAlignment="Left" Height="21" Margin="180,100,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="152" LostFocus="mail_LostFocus" />
 
         <TextBlock x:Name="imel" HorizontalAlignment="Left"  FontSize="16" Height="32" Margin="20,20,0,0" TextWrapping="Wrap" Text="Ime :" VerticalAlignment="Top" Width="150"/>
         <TextBlock x:Name="prezimel" HorizontalAlignment="Left"  FontSize="16" Height="32" Margin="20,60,0,0" TextWrapping="Wrap" Text="Prezime :" VerticalAlignment="Top" Width="150"/>
@@ -55,19 +55,20 @@
 
         <TextBlock x:Name="vozackal" HorizontalAlignment="Left"  FontSize="16" Height="60" Margin="20,260,0,0" TextWrapping="Wrap" Text="Posjedujem vozačku :" VerticalAlignment="Top" Width="150"/>
         <Button x:Name="registrujSe" Content="Registruj se" FontSize="16" HorizontalAlignment="Left" Height="35" Margin="180,393,0,0" VerticalAlignment="Top" Width="152" RenderTransformOrigin="0.491,1.198" Background="WhiteSmoke" Click="registrujSe_Click"/>
-        <PasswordBox x:Name="sifra" HorizontalAlignment="Left" Margin="180,140,0,0" VerticalAlignment="Top" Width="152"/>
-        <PasswordBox x:Name="potvrda" HorizontalAlignment="Left" Height="21" Margin="180,180,0,0" VerticalAlignment="Top" Width="152"/>
-        <TextBox x:Name="prebivaliste" HorizontalAlignment="Left" Margin="180,220,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="152"/>
+        <PasswordBox x:Name="sifra" HorizontalAlignment="Left" Margin="180,140,0,0" VerticalAlignment="Top" Width="152" LostFocus="sifra_LostFocus"/>
+        <PasswordBox x:Name="potvrda" HorizontalAlignment="Left" Height="21" Margin="180,180,0,0" VerticalAlignment="Top" Width="152" LostFocus="potvrda_LostFocus"/>
+        <TextBox x:Name="prebivaliste" HorizontalAlignment="Left" Margin="180,220,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="152" LostFocus="prebivaliste_LostFocus"/>
         <CheckBox x:Name="vozacka" Content="" HorizontalAlignment="Left" Height="35" Margin="180,265,0,0" VerticalAlignment="Top" Width="52"/>
 
         <TextBlock x:Name="SlikaLabel" Grid.Row="6" HorizontalAlignment="Left" Margin="20, 310,0,0"
 TextWrapping="Wrap" Text="Slika :" VerticalAlignment="Top"/>
 
         <Button x:Name="buttonUpload" Content="Upload"
-HorizontalAlignment="Stretch" Margin="180, 310,5,0" VerticalAlignment="Top"
+HorizontalAlignment="Stretch" Margin="180,310,257,0" VerticalAlignment="Top"
 Click="buttonUpload_Click" Height="30"/>
+        <TextBlock x:Name="porukica" HorizontalAlignment="Left" Margin="381,140,0,0" TextWrapping="Wrap" Text="{x:Bind PorukaValidacije, Mode=OneWay}" VerticalAlignment="Top" Height="32" Width="165"/>
 
-        
+
 
     </Grid>
 </UserControl>

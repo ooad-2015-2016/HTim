@@ -26,10 +26,16 @@ namespace HRentACar
     /// </summary>
     sealed partial class App : Application
     {
+        public static String ImeLogIn {get; set;}
+        public static String Mail { get; set; }
+
         public App()
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+
+            ImeLogIn = "Dobrodošli";
+            Mail = "JA 100 %";
 
             using (var db = new KorisnikDbContext())
             {
@@ -40,6 +46,10 @@ namespace HRentACar
 
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
+            if (System.Diagnostics.Debugger.IsAttached)
+            {
+                this.DebugSettings.EnableFrameRateCounter = false;
+            }
             Frame rootFrame = Window.Current.Content as Frame;
 
             // Do not repeat app initialization when the Window already has content,

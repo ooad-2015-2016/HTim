@@ -23,6 +23,8 @@ namespace HRentACar
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        
+
         public MainPage()
         {
             this.InitializeComponent();
@@ -51,6 +53,7 @@ namespace HRentACar
             else if (Pocetna.IsSelected)
             {
                 nazad.Visibility = Visibility.Collapsed;
+                stekPenl.Visibility = Visibility.Collapsed;
                 mainContentFrame.Navigate(typeof(KorisniciListView));
             }
             else if (iNFO.IsSelected)
@@ -62,7 +65,6 @@ namespace HRentACar
             {
                 nazad.Visibility = Visibility.Collapsed;
                 mainContentFrame.Navigate(typeof(Prijava));
-                stekpenl.Visibility = Visibility.Visible;
             }
         }
 
@@ -72,6 +74,12 @@ namespace HRentACar
             {
                 mainContentFrame.GoBack();
             }
+        }
+
+        private void korisnik_Clicked(object sender, RoutedEventArgs e)
+        {
+            Registracija.IsSelected = true;
+            mainContentFrame.Navigate(typeof(Registracija));
         }
     }
 }

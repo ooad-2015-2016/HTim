@@ -6,6 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+    xmlns:data ="using:HRentACar.HRentACar.Views.Kontrole" 
    >
 
     <Grid Background="WhiteSmoke" Margin="0,0,0,0">
@@ -15,17 +16,21 @@
         </Grid.RowDefinitions>
 
         <RelativePanel Background="WhiteSmoke">
-            <Button Name="PushDugme" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" FontSize="30" Click="PushDugme_Click">
+               <Button Name="PushDugme" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" FontSize="30" Click="PushDugme_Click" Height="42" Margin="0,4" Width="50">
 
-            </Button>
-            <Button Name="nazad" FontFamily="Segoe MDL2 Assets" Content="&#xE0A6;" RelativePanel.RightOf="PushDugme" FontSize="36" Background="WhiteSmoke" Click="nazad_Click">
+                </Button>
+                <Button Name="nazad"   FontFamily="Segoe MDL2 Assets" RelativePanel.RightOf="PushDugme" Content="&#xE0A6;" FontSize="36" Background="WhiteSmoke" Click="nazad_Click" Height="48" Margin="0.333,1,0,1" Width="56">
+                </Button>
 
-            </Button>
+                <RelativePanel RelativePanel.RightOf="nazad" Name="stekPenl" Height="50" VerticalAlignment="Center" Margin="55,0,55.667,0" Grid.ColumnSpan="2">
+                    <TextBlock Name="rentACar"   Text="Rent a car" FontFamily="Calibri" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+                    <TextBlock Name="deDzir"  Text="DeDzir" FontFamily="Calibri" FontSize="18" Margin="0, 26, 0, 0" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
 
-            <StackPanel Name="stekpenl" HorizontalAlignment="Right" VerticalAlignment="Center" Orientation="Horizontal" Margin="0,0,-357,-18" Height="38" Width="250">
-                <TextBlock Name="ime" Text="Rent-A-Car De Džir" FontStyle="Italic" TextWrapping="Wrap" Width="190" FontFamily="Calibri" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,9"/>
-                <Image Name="slika" Source="ms-appx:///Assets/rent.jpg" HorizontalAlignment="Right"  Width="45"/>
-            </StackPanel>
+                    <Image  Source="ms-appx:///Assets/rent.jpg" Height="50" Width="600" HorizontalAlignment="Left" Margin="150, 0, 0, 0"></Image>
+
+                </RelativePanel>
+
+                <data:ProfilKontrola x:Name="UserTab" korisnikClicked="korisnik_Clicked" HorizontalAlignment="Right" RelativePanel.RightOf="stekPenl" VerticalAlignment="Bottom" Height="50" Width="50"  Margin="0,0,-0.333,0" />
 
         </RelativePanel>
 

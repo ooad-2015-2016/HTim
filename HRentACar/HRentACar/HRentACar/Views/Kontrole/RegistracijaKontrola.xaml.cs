@@ -16,17 +16,43 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using HRentACar.HRentACar.Views.Kontrole;
+using System.ComponentModel;
+using System.Text.RegularExpressions;
 
 // The User Control item template is documented at http://go.microsoft.com/fwlink/?LinkId=234236
 
 namespace HRentACar.HRentACar.Views.Kontrole
 {
-    public sealed partial class RegistracijaKontrola : UserControl
+    public sealed partial class RegistracijaKontrola : UserControl, INotifyPropertyChanged
     {
         //Potrebno je privremeno negdje staviti sliku koja se uploaduje
         private byte[] uploadSlika;
         private List<Korisnik> korisnici = new List<Korisnik>();
         private bool ima;
+        private string porukaValidacije;
+
+        public string PorukaValidacije
+        {
+            get
+            {
+                return porukaValidacije;
+            }
+
+            set
+            {
+                porukaValidacije = value;
+                OnPropertyChanged("PorukaValidacije");
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void OnPropertyChanged(String propertyName)
+        {
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+        }
 
         public RegistracijaKontrola()
         {
@@ -97,6 +123,12 @@ namespace HRentACar.HRentACar.Views.Kontrole
 
                     db.SaveChanges();
 
+                    App.ImeLogIn = ime.Text;
+                    App.Mail = mail.Text;
+
+                    ProfilKontrola profil = new ProfilKontrola(mail.Text.ToString());
+                    //profil.Logovani = mail.Text.ToString();
+
                     //reset polja za unos
                     ime.Text = string.Empty;
                     sifra.Password = string.Empty;
@@ -151,6 +183,92 @@ namespace HRentACar.HRentACar.Views.Kontrole
                 uploadSlika = (await Windows.Storage.FileIO.ReadBufferAsync(file)).ToArray(); ;
                 //Da se na buttonu vidi neka promjena da je upload uspjesan
                 buttonUpload.Content = "Picked photo: " + file.Name;
+            }
+        }
+
+        private async void ime_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (ime.Text.Length < 3)
+            {
+                porukaValidacije = "Ime je prekratko!";
+                OnPropertyChanged("PorukaValidacije");
+            }
+            else
+            {
+                porukaValidacije = "";
+                OnPropertyChanged("PorukaValidacije");
+            }
+        }
+
+        private void prezime_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (prezime.Text.Length < 3)
+            {
+                porukaValidacije = "Prezime je prekratko!";
+                OnPropertyChanged("PorukaValidacije");
+            }
+            else
+            {
+                porukaValidacije = "";
+                OnPropertyChanged("PorukaValidacije");
+            }
+        }
+
+        private void mail_LostFocus(object sender, RoutedEventArgs e)
+        {
+            Regex regx = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            Match match = regx.Match(mail.Text);
+            if (!match.Success)
+            {
+                porukaValidacije = "Mail nije validan!";
+                OnPropertyChanged("PorukaValidacije");
+            }
+            else
+            {
+                porukaValidacije = "";
+                OnPropertyChanged("PorukaValidacije");
+            }
+        }
+
+        private void sifra_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (sifra.Password.Length < 3)
+            {
+                porukaValidacije = "Šifra je prekratka!";
+                OnPropertyChanged("PorukaValidacije");
+            }
+            else
+            {
+                porukaValidacije = "";
+                OnPropertyChanged("PorukaValidacije");
+            }
+        }
+
+        private void potvrda_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if(!potvrda.Password.ToString().Equals(sifra.Password.ToString()))
+            {
+                porukaValidacije = "Ne podudara se";
+                OnPropertyChanged("PorukaValidacije");
+            }
+            else
+            {
+                porukaValidacije = "";
+                OnPropertyChanged("PorukaValidacije");
+            }
+        }
+
+        private void prebivaliste_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (prebivaliste.Text.Length < 3)
+            {
+                porukaValidacije = "Prebivaliste je prekratko!";
+                OnPropertyChanged("PorukaValidacije");
+            }
+            else
+            {
+                porukaValidacije = "";
+                OnPropertyChanged("PorukaValidacije");
             }
         }
     }

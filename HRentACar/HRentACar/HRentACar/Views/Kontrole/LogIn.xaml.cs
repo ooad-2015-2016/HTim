@@ -52,6 +52,14 @@ namespace HRentACar.HRentACar.Views.Kontrole
                         var dialog = new Windows.UI.Popups.MessageDialog(
                              "Uspješna prijava. ", "Poruka");
 
+                        App.ImeLogIn = korisnicii[i].Ime;
+                        App.Mail = mail.Text;
+
+                        ProfilKontrola profil = new ProfilKontrola(mail.Text.ToString());
+                        //profil.OnPropertyChanged("Logovani");
+                        
+                        //profil.Logovani = mail.Text.ToString();
+
 
                         dialog.Commands.Add(new Windows.UI.Popups.UICommand("OK") { Id = 0 });
                         dialog.Commands.Add(new Windows.UI.Popups.UICommand("Cancel") { Id = 1 });

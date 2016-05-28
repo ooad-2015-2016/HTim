@@ -109,6 +109,9 @@
     <Compile Include="HRentACar\Models\Vozac.cs" />
     <Compile Include="HRentACar\Models\Vozilo.cs" />
     <Compile Include="HRentACar\Models\VoziloDbContext.cs" />
+    <Compile Include="HRentACar\Views\Kontrole\ProfilKontrola.xaml.cs">
+      <DependentUpon>ProfilKontrola.xaml</DependentUpon>
+    </Compile>
     <Compile Include="HRentACar\Views\KorisniciListView.xaml.cs">
       <DependentUpon>KorisniciListView.xaml</DependentUpon>
     </Compile>
@@ -221,6 +224,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="HRentACar\Views\Kontrole\ProfilKontrola.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="HRentACar\Views\KorisniciListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
