@@ -5,7 +5,7 @@
     xmlns:local="using:HRentACar.HRentACar.Views.Kontrole"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Height="470"
+    mc:Ignorable="d" Height="440"
     xmlns:vjuvz="using:HRentACar.HRentACar.Views"
     >
 
@@ -50,7 +50,6 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -58,34 +57,34 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <TextBox Grid.Row="0" Grid.Column="1" x:Name="ime" HorizontalAlignment="Left" Height="21" Width="200" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" LostFocus="ime_LostFocus"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Margin="0, 0, 10, 0" x:Name="ime" HorizontalAlignment="Left" Height="21" Width="170" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" LostFocus="ime_LostFocus"/>
         <TextBlock Grid.Row="0" Grid.Column="1" Text="{x:Bind ImeV, Mode=OneWay}" x:Name="imeValidacija" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Foreground="Red"/>
-        
-        <TextBox Grid.Row="1" Grid.Column="1" x:Name="prezime" HorizontalAlignment="Left" Height="21" Width="200" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" LostFocus="prezime_LostFocus"/>
+
+        <TextBox Grid.Row="1" Grid.Column="1" Margin="0, 0, 10, 0" x:Name="prezime" HorizontalAlignment="Left" Height="21" Width="170" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" LostFocus="prezime_LostFocus"/>
         <TextBlock Grid.Row="1" Grid.Column="1" Text="{x:Bind PrezimeV, Mode=OneWay}" x:Name="prezimeValidacija" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Foreground="Red"/>
 
-        <TextBox Grid.Row="2" Grid.Column="1" x:Name="mail" HorizontalAlignment="Left" Height="21" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" Width="200" LostFocus="mail_LostFocus" />
+        <TextBox Grid.Row="2" Grid.Column="1" Margin="0, 0, 10, 0" x:Name="mail" HorizontalAlignment="Left" Height="21" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" Width="170" LostFocus="mail_LostFocus" />
         <TextBlock Grid.Row="2" Grid.Column="1" Text="{x:Bind MailV, Mode=OneWay}" x:Name="mailValidacija" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Foreground="Red"/>
 
-        <TextBlock Grid.Row="0" Grid.Column="0" x:Name="imel" HorizontalAlignment="Left"  FontSize="16" Height="32" Width="145" TextWrapping="Wrap" Text="Ime :" VerticalAlignment="Bottom" />
-        <TextBlock Grid.Row="1" Grid.Column="0" x:Name="prezimel" HorizontalAlignment="Left"  FontSize="16" Height="32" Width="145" TextWrapping="Wrap" Text="Prezime :" VerticalAlignment="Bottom"/>
-        <TextBlock Grid.Row="2" Grid.Column="0" x:Name="maill" HorizontalAlignment="Left"  FontSize="16" Height="32" Width="145" TextWrapping="Wrap" Text="Email :" VerticalAlignment="Bottom" />
-        <TextBlock Grid.Row="3" Grid.Column="0" x:Name="sifral" HorizontalAlignment="Left"  FontSize="16" Height="32" TextWrapping="Wrap" Text="Sifra :" VerticalAlignment="Bottom" Width="145"/>
-        <TextBlock Grid.Row="4" Grid.Column="0" x:Name="potvrdal" HorizontalAlignment="Left"  FontSize="16" Height="32" TextWrapping="Wrap" Text="Potvrda sifre :" VerticalAlignment="Bottom" Width="145"/>
-        <TextBlock Grid.Row="5" Grid.Column="0" x:Name="prebivalistel" HorizontalAlignment="Left"  FontSize="16" Height="32" TextWrapping="Wrap" Text="Prebivaliste :" VerticalAlignment="Bottom" Width="145"/>
-        <TextBlock Grid.Row="6" Grid.Column="0" x:Name="vozackal" HorizontalAlignment="Left"  FontSize="16" Height="50" TextWrapping="Wrap" Text="Posjedujem vozačku :" VerticalAlignment="Bottom" Width="145"/>
-        <Button Grid.Row="8" Grid.Column="1" x:Name="registrujSe" Content="Registruj se" FontSize="16" HorizontalAlignment="Left" Height="35" VerticalAlignment="Center" Width="152" RenderTransformOrigin="0.491,1.198" Background="WhiteSmoke" Click="registrujSe_Click"/>
+        <TextBlock Grid.Row="0" Grid.Column="0" Margin="10, 0, 0, 0" x:Name="imel" HorizontalAlignment="Left"  FontSize="16" Height="32" Width="145" TextWrapping="Wrap" Text="Ime :" VerticalAlignment="Bottom" />
+        <TextBlock Grid.Row="1" Grid.Column="0" Margin="10, 0, 0, 0" x:Name="prezimel" HorizontalAlignment="Left"  FontSize="16" Height="32" Width="145" TextWrapping="Wrap" Text="Prezime :" VerticalAlignment="Bottom"/>
+        <TextBlock Grid.Row="2" Grid.Column="0" Margin="10, 0, 0, 0" x:Name="maill" HorizontalAlignment="Left"  FontSize="16" Height="32" Width="145" TextWrapping="Wrap" Text="Email :" VerticalAlignment="Bottom" />
+        <TextBlock Grid.Row="3" Grid.Column="0" Margin="10, 0, 0, 0" x:Name="sifral" HorizontalAlignment="Left"  FontSize="16" Height="32" TextWrapping="Wrap" Text="Sifra :" VerticalAlignment="Bottom" Width="145"/>
+        <TextBlock Grid.Row="4" Grid.Column="0" Margin="10, 0, 0, 0" x:Name="potvrdal" HorizontalAlignment="Left"  FontSize="16" Height="32" TextWrapping="Wrap" Text="Potvrda sifre :" VerticalAlignment="Bottom" Width="145"/>
+        <TextBlock Grid.Row="5" Grid.Column="0" Margin="10, 0, 0, 0" x:Name="prebivalistel" HorizontalAlignment="Left"  FontSize="16" Height="32" TextWrapping="Wrap" Text="Prebivaliste :" VerticalAlignment="Bottom" Width="145"/>
+        <TextBlock Grid.Row="6" Grid.Column="0" Margin="10, 0, 0, 0" x:Name="vozackal" HorizontalAlignment="Left"  FontSize="16" Height="50" TextWrapping="Wrap" Text="Posjedujem vozačku :" VerticalAlignment="Bottom" Width="145"/>
+        <Button Grid.Row="8" Margin="0, 0, 10, 0" Grid.Column="1" x:Name="registrujSe" Content="Registruj se" FontSize="16" HorizontalAlignment="Right" Height="35" VerticalAlignment="Center" Width="152" RenderTransformOrigin="0.491,1.198" Background="WhiteSmoke" Click="registrujSe_Click"/>
 
-        <PasswordBox Grid.Row="3" Grid.Column="1" x:Name="sifra" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="200" LostFocus="sifra_LostFocus"/>
+        <PasswordBox Grid.Row="3" Grid.Column="1" Margin="0, 0, 10, 0" x:Name="sifra" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="170" LostFocus="sifra_LostFocus"/>
         <TextBlock Grid.Row="3" Grid.Column="1" Text="{x:Bind SifraV, Mode=OneWay}" x:Name="sifraValidacija" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Foreground="Red"/>
 
-        <PasswordBox Grid.Row="4" Grid.Column="1" x:Name="potvrda" HorizontalAlignment="Left" Height="21" VerticalAlignment="Bottom" Width="200" LostFocus="potvrda_LostFocus"/>
-        <TextBox Grid.Row="5" Grid.Column="1" x:Name="prebivaliste" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" Width="200" LostFocus="prebivaliste_LostFocus"/>
+        <PasswordBox Grid.Row="4" Grid.Column="1" Margin="0, 0, 10, 0" x:Name="potvrda" HorizontalAlignment="Left" Height="21" VerticalAlignment="Bottom" Width="170" LostFocus="potvrda_LostFocus"/>
+        <TextBox Grid.Row="5" Grid.Column="1" Margin="0, 0, 10, 0" x:Name="prebivaliste" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" Width="170" LostFocus="prebivaliste_LostFocus"/>
         <TextBlock Grid.Row="5" Grid.Column="1" Text="{x:Bind PrebivalisteV, Mode=OneWay}" x:Name="prebivalisteValidacija" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Foreground="Red"/>
 
         <CheckBox Grid.Row="6" Grid.Column="1" x:Name="vozacka" Content="" HorizontalAlignment="Left" Height="35" VerticalAlignment="Center" Width="52"/>
 
-        <TextBlock Grid.Row="7" Grid.Column="0" x:Name="SlikaLabel" HorizontalAlignment="Left" Width="145"
+        <TextBlock Grid.Row="7" Grid.Column="0" Margin="10, 0, 0, 0" x:Name="SlikaLabel" HorizontalAlignment="Left" Width="145"
 TextWrapping="Wrap" Text="Slika :" VerticalAlignment="Bottom"/>
 
         <Button Grid.Row="7" Grid.Column="1" x:Name="buttonUpload" Content="Upload"

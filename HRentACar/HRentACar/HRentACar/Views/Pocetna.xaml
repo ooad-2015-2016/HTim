@@ -8,13 +8,11 @@
     mc:Ignorable="d"
   >
 
-    <Grid Background="#FF9BD1CA" Margin="55,0,0,0" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
-        <Grid.RenderTransform>
-            <CompositeTransform Rotation="0.201"/>
-        </Grid.RenderTransform>
+    <Grid Name="LayoutRoot" Background="#FF9BD1CA" Margin="55,0,0,0"  UseLayoutRounding="False" d:LayoutRounding="Auto">
 
-        <Image Source="/Assets/pocetna.jpg" 
-              Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Center" />
+       
+               <Image Source="/Assets/pocetna.jpg"        
+                  Stretch="Fill" />
 
     </Grid>
 </Page>

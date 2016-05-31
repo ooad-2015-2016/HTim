@@ -9,9 +9,52 @@
     mc:Ignorable="d">
 
     <Grid Margin="55,0,0,0">
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+
+                <VisualState x:Name="Wide">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="700"/>
+                    </VisualState.StateTriggers>
+
+                    <VisualState.Setters>
+                        <Setter Target="grid.(Grid.Row)" Value="1"/>
+                        <Setter Target="grid.(Grid.Column)" Value="1"/>
+
+                        <Setter Target="grid.(Grid.RowSpan)" Value="1"/>
+                        <Setter Target="grid.(Grid.ColumnSpan)" Value="1"/>
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:Name="Narrow">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+
+                    <VisualState.Setters>
+                        <Setter Target="grid.(Grid.Row)" Value="1"/>
+                        <Setter Target="grid.(Grid.Column)" Value="0"/>
+
+                        <Setter Target="grid.(Grid.RowSpan)" Value="2"/>
+                        <Setter Target="grid.(Grid.ColumnSpan)" Value="3"/>
+
+                    </VisualState.Setters>
+
+                </VisualState>
+
+            </VisualStateGroup>
+
+
+
+        </VisualStateManager.VisualStateGroups>
+
         <Grid.Background>
             <ImageBrush ImageSource="/Assets/pozadina3.jpg" Opacity="0.66" />
         </Grid.Background>
+        
+        
+      
         <Grid.RowDefinitions>
             <RowDefinition Height="0.5*"/>
             <RowDefinition Height="5*"/>
@@ -23,7 +66,7 @@
             <ColumnDefinition Width="6*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <GridView Grid.Row="1" Grid.Column="1">
+        <GridView Name="grid" >
 
             <data:RegistracijaKontrola HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Loaded="RegistracijaKontrola_Loaded"/>
 

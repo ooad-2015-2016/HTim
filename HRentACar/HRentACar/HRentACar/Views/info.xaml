@@ -8,7 +8,187 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0, -78, 0,0 ">
-        <Image Source="/Assets/info.png" Margin="-170,10,0,0" Height="700" Width="600"/>
+
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+
+                <VisualState x:Name="Wide">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="700"/>
+                    </VisualState.StateTriggers>
+
+                    <VisualState.Setters>
+                        <Setter Target="prvi.(Grid.Row)" Value="1"/>
+                        <Setter Target="prvi.(Grid.Column)" Value="1"/>
+
+                        <Setter Target="prvi.(Grid.RowSpan)" Value="1"/>
+                        <Setter Target="prvi.(Grid.ColumnSpan)" Value="1"/>
+
+                        <Setter Target="drugi.(Grid.Row)" Value="3"/>
+                        <Setter Target="drugi.(Grid.Column)" Value="1"/>
+
+                        <Setter Target="drugi.(Grid.RowSpan)" Value="1"/>
+                        <Setter Target="drugi.(Grid.ColumnSpan)" Value="1"/>
+
+                        <Setter Target="treci.(Grid.Row)" Value="4"/>
+                        <Setter Target="treci.(Grid.Column)" Value="1"/>
+
+                        <Setter Target="treci.(Grid.RowSpan)" Value="1"/>
+                        <Setter Target="treci.(Grid.ColumnSpan)" Value="3"/>
+
+
+                        <Setter Target="cetvrti.(Grid.Row)" Value="5"/>
+                        <Setter Target="cetvrti.(Grid.Column)" Value="1"/>
+
+                        <Setter Target="cetvrti.(Grid.RowSpan)" Value="2"/>
+                        <Setter Target="cetvrti.(Grid.ColumnSpan)" Value="3"/>
+
+
+                        <Setter Target="peti.(Grid.Row)" Value="6"/>
+                        <Setter Target="peti.(Grid.Column)" Value="1"/>
+
+                        <Setter Target="peti.(Grid.RowSpan)" Value="2"/>
+                        <Setter Target="peti.(Grid.ColumnSpan)" Value="3"/>
+
+
+                        <Setter Target="sesti.(Grid.Row)" Value="7"/>
+                        <Setter Target="sesti.(Grid.Column)" Value="1"/>
+
+                        <Setter Target="sesti.(Grid.RowSpan)" Value="2"/>
+                        <Setter Target="sesti.(Grid.ColumnSpan)" Value="3"/>
+
+
+                        <Setter Target="sedmi.(Grid.Row)" Value="8"/>
+                        <Setter Target="sedmi.(Grid.Column)" Value="1"/>
+
+                        <Setter Target="sedmi.(Grid.RowSpan)" Value="2"/>
+                        <Setter Target="sedmi.(Grid.ColumnSpan)" Value="3"/>
+
+
+                        <Setter Target="osmi.(Grid.Row)" Value="9"/>
+                        <Setter Target="osmi.(Grid.Column)" Value="1"/>
+
+                        <Setter Target="osmi.(Grid.RowSpan)" Value="2"/>
+                        <Setter Target="osmi.(Grid.ColumnSpan)" Value="3"/>
+
+                        <Setter Target="deveti.(Grid.Row)" Value="11"/>
+                        <Setter Target="deveti.(Grid.Column)" Value="1"/>
+
+                        <Setter Target="deveti.(Grid.RowSpan)" Value="2"/>
+                        <Setter Target="deveti.(Grid.ColumnSpan)" Value="3"/>
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:Name="Narrow">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+
+                    <VisualState.Setters>
+                        <Setter Target="prvi.(Grid.Row)" Value="1"/>
+                        <Setter Target="prvi.(Grid.Column)" Value="1"/>
+
+                        <Setter Target="prvi.(Grid.RowSpan)" Value="1"/>
+                        <Setter Target="prvi.(Grid.ColumnSpan)" Value="2"/>
+
+                        <Setter Target="drugi.(Grid.Row)" Value="3"/>
+                        <Setter Target="drugi.(Grid.Column)" Value="1"/>
+
+                        <Setter Target="drugi.(Grid.RowSpan)" Value="1"/>
+                        <Setter Target="drugi.(Grid.ColumnSpan)" Value="2"/>
+
+
+                        <Setter Target="treci.(Grid.Row)" Value="4"/>
+                        <Setter Target="treci.(Grid.Column)" Value="1"/>
+
+                        <Setter Target="treci.(Grid.RowSpan)" Value="1"/>
+                        <Setter Target="treci.(Grid.ColumnSpan)" Value="2"/>
+
+
+                        <Setter Target="cetvrti.(Grid.Row)" Value="5"/>
+                        <Setter Target="cetvrti.(Grid.Column)" Value="1"/>
+
+                        <Setter Target="cetvrti.(Grid.RowSpan)" Value="1"/>
+                        <Setter Target="cetvrti.(Grid.ColumnSpan)" Value="2"/>
+
+
+                        <Setter Target="peti.(Grid.Row)" Value="6"/>
+                        <Setter Target="peti.(Grid.Column)" Value="1"/>
+
+                        <Setter Target="peti.(Grid.RowSpan)" Value="1"/>
+                        <Setter Target="peti.(Grid.ColumnSpan)" Value="2"/>
+
+
+                        <Setter Target="sesti.(Grid.Row)" Value="7"/>
+                        <Setter Target="sesti.(Grid.Column)" Value="1"/>
+
+                        <Setter Target="sesti.(Grid.RowSpan)" Value="1"/>
+                        <Setter Target="sesti.(Grid.ColumnSpan)" Value="2"/>
+
+
+                        <Setter Target="sedmi.(Grid.Row)" Value="8"/>
+                        <Setter Target="sedmi.(Grid.Column)" Value="1"/>
+
+                        <Setter Target="sedmi.(Grid.RowSpan)" Value="2"/>
+                        <Setter Target="sedmi.(Grid.ColumnSpan)" Value="2"/>
+
+
+                        <Setter Target="osmi.(Grid.Row)" Value="9"/>
+                        <Setter Target="osmi.(Grid.Column)" Value="1"/>
+
+                        <Setter Target="osmi.(Grid.RowSpan)" Value="2"/>
+                        <Setter Target="osmi.(Grid.ColumnSpan)" Value="2"/>
+
+                        <Setter Target="deveti.(Grid.Row)" Value="11"/>
+                        <Setter Target="deveti.(Grid.Column)" Value="1"/>
+
+                        <Setter Target="deveti.(Grid.RowSpan)" Value="1"/>
+                        <Setter Target="deveti.(Grid.ColumnSpan)" Value="2"/>
+                    </VisualState.Setters>
+
+                </VisualState>
+
+            </VisualStateGroup>
+           </VisualStateManager.VisualStateGroups>
+
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="0"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+   
+                <TextBlock Name="prvi" VerticalAlignment="Center" FontSize="28" Text="Uslovi korištenja usluga ove Rent a car kompanije su: " FontFamily="Calibri" FontStyle="Italic" TextWrapping="Wrap" />
+                <TextBlock Name="drugi" VerticalAlignment="Center" Text="-Iznajmljeno vozilo mogu voziti punoljetne osobe, koje posjeduju važeću vozačku dozvolu " FontFamily="Calibri" FontStyle="Oblique" TextWrapping="Wrap" />
+                <TextBlock Name="treci" VerticalAlignment="Center" Text="-Unajmljeno vozilo ne smije biti upotrebljavano od osobe koja nije navedena na ugovoru o najmu" FontFamily="Calibri" FontStyle="Oblique" TextWrapping="Wrap" />
+                <TextBlock Name="cetvrti" VerticalAlignment="Center" Text="-Nije moguće korištenje unajmljenog vozila izvan granica Bosne i Hercegovine" FontFamily="Calibri" FontStyle="Oblique" TextWrapping="Wrap" />
+                <TextBlock Name="peti" VerticalAlignment="Center" Text="-Plaćanje se vrši u konvertibilnim markama ili u eurima, te u skladu sa cjenovnikom" FontFamily="Calibri" FontStyle="Oblique" TextWrapping="Wrap"/>
+                <TextBlock Name="sesti" VerticalAlignment="Center" Text="-Kompanija pruža uslugu asistencije u slučaju kvara 24/7, a u slučaju kad je kvar uzrokovan nemarom klijenta, klijent 
+ snosi trošak u punom iznosu asistencije i popravka vozila" FontFamily="Calibri" FontStyle="Oblique" TextWrapping="Wrap" />
+                <TextBlock Name="sedmi" VerticalAlignment="Center" Text="-Sva vozila su opremljena svim dokumentima potrebnim za redovno prometovanje. Gubitak ili oštećenje dokumenata i ključeva 
+ se naplaćuje po važećem cjenovniku." FontFamily="Calibri" FontStyle="Oblique" TextWrapping="Wrap" />
+                <TextBlock Name="osmi" VerticalAlignment="Center" Text="-O svakoj saobraćajnoj nezgodi mora se odmah obavjestiti najbliža Policijska stanica i naša kompanija" FontFamily="Calibri" FontStyle="Oblique" TextWrapping="Wrap" />
+                <TextBlock Name="deveti" VerticalAlignment="Center" Text="Svojim potpisom na ugovor o najmu i preuzimanjem vozila potvrđujete svoju saglasnost sa navedenim uvjetima." FontFamily="Calibri" FontStyle="Italic" TextWrapping="Wrap"/>
+
+        
+
 
     </Grid>
 </Page>
