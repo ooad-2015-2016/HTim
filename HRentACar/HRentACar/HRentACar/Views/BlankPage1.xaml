@@ -1,0 +1,112 @@
+﻿<Page
+    x:Class="HRentACar.HRentACar.Views.BlankPage1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HRentACar.HRentACar.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Width="Auto" Name="grid">
+
+       <!-- <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+
+                <VisualState x:Name="Wide">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="700"/>
+                    </VisualState.StateTriggers>
+
+                    <VisualState.Setters>
+                        <Setter Target="grid.(Grid.Row)" Value="1"/>
+                        <Setter Target="grid.(Grid.Column)" Value="1"/>
+
+                        <Setter Target="grid.(Grid.RowSpan)" Value="1"/>
+                        <Setter Target="grid.(Grid.ColumnSpan)" Value="1"/>
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:Name="Narrow">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+
+                    <VisualState.Setters>
+                        <Setter Target="grid.(Grid.Row)" Value="0"/>
+                        <Setter Target="grid.(Grid.Column)" Value="0"/>
+
+                        <Setter Target="grid.(Grid.RowSpan)" Value="10"/>
+                        <Setter Target="grid.(Grid.ColumnSpan)" Value="3"/>
+
+                    </VisualState.Setters>
+
+                </VisualState>
+
+            </VisualStateGroup>
+
+
+
+        </VisualStateManager.VisualStateGroups>
+-->
+        <Grid.Background>
+            <SolidColorBrush Color="WhiteSmoke" Opacity="0.38"/>
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*" />
+            <ColumnDefinition Width="0.7*"/>
+            <ColumnDefinition Width="1.2*"/>
+        </Grid.ColumnDefinitions>
+        
+            <TextBox Grid.Row="1" Grid.Column="2" Margin="0, 0, 10, 0" x:Name="ime" Text="{Binding uIme, Mode=TwoWay}" HorizontalAlignment="Left" Height="21" Width="170" TextWrapping="Wrap" VerticalAlignment="Bottom" />
+        <TextBlock Grid.Row="1" Grid.Column="2" TextWrapping="Wrap" Text="{Binding ImeV, UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" x:Name="imeValidacija" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Foreground="Red"/>
+
+        <TextBox Grid.Row="2" Grid.Column="2" Margin="0, 0, 10, 0" x:Name="prezime" Text="{Binding uPrezime, Mode=TwoWay}" HorizontalAlignment="Left" Height="21" Width="170" TextWrapping="Wrap" VerticalAlignment="Bottom"/>
+        <TextBlock Grid.Row="2" Grid.Column="2" Text="{Binding PrezimeV, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" x:Name="prezimeValidacija" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Foreground="Red"/>
+
+            <TextBox Grid.Row="3" Grid.Column="2" Margin="0, 0, 10, 0" x:Name="mail" Text="{Binding uMail, Mode=TwoWay}" HorizontalAlignment="Left" Height="21" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="170"  />
+            <TextBlock Grid.Row="3" Grid.Column="2" Text="{Binding MailV, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" x:Name="mailValidacija" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Foreground="Red"/>
+
+            <TextBlock Grid.Row="1" Grid.Column="1" Margin="10, 0, 0, 0" x:Name="imel" HorizontalAlignment="Left"  FontSize="16" Height="32" Width="145" TextWrapping="Wrap" Text="Ime :" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="2" Grid.Column="1" Margin="10, 0, 0, 0" x:Name="prezimel" HorizontalAlignment="Left"  FontSize="16" Height="32" Width="145" TextWrapping="Wrap" Text="Prezime :" VerticalAlignment="Bottom"/>
+            <TextBlock Grid.Row="3" Grid.Column="1" Margin="10, 0, 0, 0" x:Name="maill" HorizontalAlignment="Left"  FontSize="16" Height="32" Width="145" TextWrapping="Wrap" Text="Email :" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="4" Grid.Column="1" Margin="10, 0, 0, 0" x:Name="sifral" HorizontalAlignment="Left"  FontSize="16" Height="32" TextWrapping="Wrap" Text="Sifra :" VerticalAlignment="Bottom" Width="145"/>
+            <TextBlock Grid.Row="5" Grid.Column="1" Margin="10, 0, 0, 0" x:Name="potvrdal" HorizontalAlignment="Left"  FontSize="16" Height="32" TextWrapping="Wrap" Text="Potvrda sifre :" VerticalAlignment="Bottom" Width="145"/>
+            <TextBlock Grid.Row="6" Grid.Column="1" Margin="10, 0, 0, 0" x:Name="prebivalistel" HorizontalAlignment="Left"  FontSize="16" Height="32" TextWrapping="Wrap" Text="Prebivaliste :" VerticalAlignment="Bottom" Width="145"/>
+            <TextBlock Grid.Row="7" Grid.Column="1" Margin="10, 0, 0, 0" x:Name="vozackal" HorizontalAlignment="Left"  FontSize="16" Height="50" TextWrapping="Wrap" Text="Posjedujem vozačku :" VerticalAlignment="Bottom" Width="145"/>
+            <Button Grid.Row="9" Grid.Column="2" x:Name="registrujSe" Content="Registruj se" FontSize="16" HorizontalAlignment="Left" Height="35" VerticalAlignment="Center" Width="145" RenderTransformOrigin="0.491,1.198" Background="WhiteSmoke" Command="{Binding RegistrujNovog}"/>
+
+            <PasswordBox Grid.Row="4" Grid.Column="2" Margin="0, 0, 10, 0" x:Name="sifra" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="170" Password="{Binding uPassword, Mode=TwoWay}"/>
+            <TextBlock Grid.Row="4" Grid.Column="2" Text="{Binding PasswordV, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" x:Name="sifraValidacija" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Foreground="Red"/>
+
+            <PasswordBox Grid.Row="5" Grid.Column="2" Margin="0, 0, 10, 0" x:Name="potvrda" HorizontalAlignment="Left" Height="21" VerticalAlignment="Bottom" Width="170" Password="{Binding uPasswordPotvrda, Mode=TwoWay}"/>
+        <TextBlock Grid.Row="5" Grid.Column="2" Text="{Binding PotvrdaV, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" x:Name="potvrdaValidacija" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Foreground="Red"/>
+        <TextBox Grid.Row="6" Grid.Column="2" Margin="0, 0, 10, 0" x:Name="prebivaliste" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding uPrebivaliste, Mode=TwoWay}" VerticalAlignment="Bottom" Width="170" LostFocus="prebivaliste_LostFocus"/>
+            <TextBlock Grid.Row="6" Grid.Column="2" Text="{Binding PrebivalisteV, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" x:Name="prebivalisteValidacija" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Foreground="Red"/>
+
+            <CheckBox Grid.Row="7" Grid.Column="2" x:Name="vozacka" Content="" HorizontalAlignment="Left" Height="35" VerticalAlignment="Center" Width="52"/>
+
+            <TextBlock Grid.Row="8" Grid.Column="1" Margin="10, 0, 0, 0" x:Name="SlikaLabel" HorizontalAlignment="Left" Width="145"
+TextWrapping="Wrap" Text="Slika :" VerticalAlignment="Bottom"/>
+
+            <Button Grid.Row="8" Grid.Column="2" x:Name="buttonUpload" Content="Upload"
+HorizontalAlignment="Left" VerticalAlignment="Bottom"
+Height="36" Width="145" Margin="0, 0, 10, 0"/>
+
+            <TextBlock Grid.Column="1" Grid.Row="9" Foreground="Red" Name="verifikacija" HorizontalAlignment="Right" TextWrapping="Wrap" Text="{Binding VerifikacijaPoruka, UpdateSourceTrigger=PropertyChanged}"></TextBlock>
+        
+    </Grid>
+</Page>

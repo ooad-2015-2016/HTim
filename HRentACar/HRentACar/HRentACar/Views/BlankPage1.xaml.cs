@@ -1,14 +1,10 @@
-﻿using Microsoft.Data.Entity;
-using HRentACar.HRentACar.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
-using Windows.Storage;
-using Windows.Storage.Pickers;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -16,17 +12,35 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using HRentACar.HRentACar.Views.Kontrole;
-using System.ComponentModel;
+using HRentACar.HRentACar.ViewModels;
 using System.Text.RegularExpressions;
+using Windows.Storage;
+using Windows.Storage.Pickers;
+using HRentACar.HRentACar.Views.Kontrole;
+using HRentACar.HRentACar.Models;
+using System.ComponentModel;
 
-// The User Control item template is documented at http://go.microsoft.com/fwlink/?LinkId=234236
+// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace HRentACar.HRentACar.Views.Kontrole
+namespace HRentACar.HRentACar.Views
 {
-    public sealed partial class RegistracijaKontrola : UserControl, INotifyPropertyChanged
+    /// <summary>
+    /// An empty page that can be used on its own or navigated to within a Frame.
+    /// </summary>
+    public sealed partial class BlankPage1 : Page, INotifyPropertyChanged
     {
-        //Potrebno je privremeno negdje staviti sliku koja se uploaduje
+        public BlankPage1()
+        {
+            this.InitializeComponent();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            RegistracijaKorisnikViewModel registracijaKorisnikViewModel = e.Parameter as RegistracijaKorisnikViewModel;
+            DataContext = registracijaKorisnikViewModel;
+        }
+
+
         private byte[] uploadSlika;
         private List<Korisnik> korisnici = new List<Korisnik>();
         private bool ima;
@@ -130,14 +144,7 @@ namespace HRentACar.HRentACar.Views.Kontrole
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        public RegistracijaKontrola()
-        {
-            this.InitializeComponent();
-            Korisnik k = new Korisnik();
-            grid.DataContext = k;
 
-        }
-        
 
         private async void registrujSe_Click(object sender, RoutedEventArgs e)
         {
@@ -237,14 +244,14 @@ namespace HRentACar.HRentACar.Views.Kontrole
                     dialog.CancelCommandIndex = 1;
 
                     var result = await dialog.ShowAsync();
-                    
+
                 }
-                
+
             }
 
 
         }
-               
+
 
         private async void buttonUpload_Click(object sender, RoutedEventArgs e)
         {
@@ -266,19 +273,7 @@ namespace HRentACar.HRentACar.Views.Kontrole
             }
         }
 
-        private async void ime_LostFocus(object sender, RoutedEventArgs e)
-        {
-            if (ime.Text.Length < 3)
-            {
-                imeV = "Ime je prekratko!";
-                OnPropertyChanged("ImeV");
-            }
-            else
-            {
-                imeV = "";
-                OnPropertyChanged("ImeV");
-            }
-        }
+        
 
         private void prezime_LostFocus(object sender, RoutedEventArgs e)
         {
@@ -326,7 +321,7 @@ namespace HRentACar.HRentACar.Views.Kontrole
 
         private void potvrda_LostFocus(object sender, RoutedEventArgs e)
         {
-            if(!potvrda.Password.ToString().Equals(sifra.Password.ToString()))
+            if (!potvrda.Password.ToString().Equals(sifra.Password.ToString()))
             {
                 sifraV = "Unesene šifre nisu jednake!";
                 OnPropertyChanged("SifraV");

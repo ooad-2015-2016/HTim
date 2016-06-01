@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using HRentACar.HRentACar.ViewModels;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -30,6 +31,12 @@ namespace HRentACar.HRentACar.Views
         private void RegistracijaKontrola_Loaded(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            RegistracijaKorisnikViewModel registracijaKorisnikViewModel = e.Parameter as RegistracijaKorisnikViewModel;
+            DataContext = registracijaKorisnikViewModel;
         }
     }
 }

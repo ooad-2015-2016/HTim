@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using HRentACar.HRentACar.Views;
+using HRentACar.HRentACar.ViewModels;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -48,7 +49,7 @@ namespace HRentACar
             else if (Registracija.IsSelected)
             {
                 nazad.Visibility = Visibility.Collapsed;
-                mainContentFrame.Navigate(typeof(Registracija));
+                mainContentFrame.Navigate(typeof(BlankPage1), new RegistracijaKorisnikViewModel(this));
             }
             else if (Pocetna.IsSelected)
             {

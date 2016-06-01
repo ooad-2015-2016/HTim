@@ -68,7 +68,7 @@
         </Grid.ColumnDefinitions>
         <GridView Name="grid" >
 
-            <data:RegistracijaKontrola HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Loaded="RegistracijaKontrola_Loaded"/>
+            <data:RegistracijaKontrola HorizontalAlignment="Stretch" VerticalAlignment="Stretch" DataContext="{Binding}" Loaded="RegistracijaKontrola_Loaded"/>
 
 
         </GridView>
