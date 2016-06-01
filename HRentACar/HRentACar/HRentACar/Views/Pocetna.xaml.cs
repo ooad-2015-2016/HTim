@@ -34,7 +34,7 @@ namespace HRentACar.HRentACar.Views
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Registracija));
+            this.Frame.Navigate(typeof(RegistracijaKorisnika));
         }
     }
 }

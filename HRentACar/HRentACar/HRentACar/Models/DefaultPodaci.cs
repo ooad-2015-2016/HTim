@@ -24,6 +24,20 @@ namespace HRentACar.HRentACar.Models
                 }
                 );
                 context.SaveChanges();
+
+
+                context.Korisnici.AddRange(
+                new Korisnik()
+                {
+                    KorisnikId = 2,
+                    Ime = "Sumejja",
+                    Prezime = "Halilovic",
+                    Sifra = "sifra",
+                    Email = "sumejja.halilovic.96@gmail.com"
+
+                }
+                );
+                context.SaveChanges();
             }
         }
     }

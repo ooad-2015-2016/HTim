@@ -30,8 +30,20 @@
 
                 </RelativePanel>
 
-                <data:ProfilKontrola x:Name="UserTab" korisnikClicked="korisnik_Clicked" HorizontalAlignment="Right" RelativePanel.RightOf="stekPenl" VerticalAlignment="Bottom" Height="50"  Margin="0,0,-0.333,0" />
+            <Button Style="{StaticResource UserTabButtonStyle}" Name="korisnik">
+                <Button.Flyout>
+                    <MenuFlyout Placement="Top">
+                        <MenuFlyoutItem Name="korisničkiProfil" Text="Korisnički Profil" Foreground="#767c83" HorizontalAlignment="Stretch" FontFamily="Roboto" FontWeight="Light" FontSize="12" Margin="250, 9, 0, 0"/>
+                        <MenuFlyoutSeparator Background="#767c83" Margin="250, 0, 0, 0"/>
+                        <MenuFlyoutItem Text="Odjava" Foreground="#767c83" HorizontalAlignment="Stretch" FontFamily="Roboto" FontWeight="Light" FontSize="12" Margin="250, 0, 0, 9"/>
+                    </MenuFlyout>
+                </Button.Flyout>
 
+                <StackPanel Name="profil" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="400, 0, 0, 0" >
+                    <TextBlock Name="logovaniKorisnik" VerticalAlignment="Center" Text="{Binding Logovani, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" FontFamily="Roboto"/>
+                    <Border Background="Bisque" CornerRadius="50" VerticalAlignment="Center" Width="30" Height="30" Margin="10,0,0,0"/>
+                </StackPanel>
+            </Button>
         </RelativePanel>
 
         <Frame Name="mainContentFrame" Grid.Row="1"/>

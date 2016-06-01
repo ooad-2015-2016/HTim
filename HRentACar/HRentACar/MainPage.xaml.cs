@@ -33,7 +33,12 @@ namespace HRentACar
             nazad.Visibility = Visibility.Collapsed;
         }
 
-   
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            MainModelView mainModelView = e.Parameter as MainModelView;
+            DataContext = mainModelView;
+        }
+
         private void PushDugme_Click(object sender, RoutedEventArgs e)
         {
             MojView.IsPaneOpen = !MojView.IsPaneOpen;
@@ -49,7 +54,7 @@ namespace HRentACar
             else if (Registracija.IsSelected)
             {
                 nazad.Visibility = Visibility.Collapsed;
-                mainContentFrame.Navigate(typeof(BlankPage1), new RegistracijaKorisnikViewModel(this));
+                mainContentFrame.Navigate(typeof(RegistracijaKorisnika), new RegistracijaKorisnikViewModel(this));
             }
             else if (Pocetna.IsSelected)
             {
@@ -80,7 +85,7 @@ namespace HRentACar
         private void korisnik_Clicked(object sender, RoutedEventArgs e)
         {
             Registracija.IsSelected = true;
-            mainContentFrame.Navigate(typeof(Registracija));
+            mainContentFrame.Navigate(typeof(RegistracijaKorisnika));
         }
     }
 }

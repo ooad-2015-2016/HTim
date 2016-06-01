@@ -98,6 +98,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="HRentACar\Helper\INavigationService.cs" />
     <Compile Include="HRentACar\Helper\RelayCommand.cs" />
     <Compile Include="HRentACar\Models\Administrator.cs" />
     <Compile Include="HRentACar\Models\DefaultPodaci.cs" />
@@ -110,9 +111,10 @@
     <Compile Include="HRentACar\Models\Vozac.cs" />
     <Compile Include="HRentACar\Models\Vozilo.cs" />
     <Compile Include="HRentACar\Models\VoziloDbContext.cs" />
+    <Compile Include="HRentACar\ViewModels\MainModelView.cs" />
     <Compile Include="HRentACar\ViewModels\RegistracijaKorisnikViewModel.cs" />
-    <Compile Include="HRentACar\Views\BlankPage1.xaml.cs">
-      <DependentUpon>BlankPage1.xaml</DependentUpon>
+    <Compile Include="HRentACar\Views\RegistracijaKorisnika.xaml.cs">
+      <DependentUpon>RegistracijaKorisnika.xaml</DependentUpon>
     </Compile>
     <Compile Include="HRentACar\Views\Kontrole\ProfilKontrola.xaml.cs">
       <DependentUpon>ProfilKontrola.xaml</DependentUpon>
@@ -134,9 +136,6 @@
     <Compile Include="HRentACar\Views\Kontrole\LogIn.xaml.cs">
       <DependentUpon>LogIn.xaml</DependentUpon>
     </Compile>
-    <Compile Include="HRentACar\Views\Kontrole\RegistracijaKontrola.xaml.cs">
-      <DependentUpon>RegistracijaKontrola.xaml</DependentUpon>
-    </Compile>
     <Compile Include="HRentACar\Views\Kontrole\VoziloDetalji.xaml.cs">
       <DependentUpon>VoziloDetalji.xaml</DependentUpon>
     </Compile>
@@ -145,9 +144,6 @@
     </Compile>
     <Compile Include="HRentACar\Views\Prijava.xaml.cs">
       <DependentUpon>Prijava.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="HRentACar\Views\Registracija.xaml.cs">
-      <DependentUpon>Registracija.xaml</DependentUpon>
     </Compile>
     <Compile Include="HRentACar\Views\VoziloKlik.xaml.cs">
       <DependentUpon>VoziloKlik.xaml</DependentUpon>
@@ -229,7 +225,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="HRentACar\Views\BlankPage1.xaml">
+    <Page Include="HRentACar\Views\RegistracijaKorisnika.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -257,10 +253,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="HRentACar\Views\Kontrole\RegistracijaKontrola.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="HRentACar\Views\Kontrole\VoziloDetalji.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -270,10 +262,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="HRentACar\Views\Prijava.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="HRentACar\Views\Registracija.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

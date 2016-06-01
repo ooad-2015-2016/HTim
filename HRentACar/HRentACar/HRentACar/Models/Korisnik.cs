@@ -18,8 +18,6 @@ namespace HRentACar.HRentACar.Models
         private string sifra;
         private string email;
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
         public byte[] Slika { get; set; }
 
         public Korisnik(int id, string i, string p, string s, string e, byte[] pic)

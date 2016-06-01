@@ -21,10 +21,6 @@
             </Button.Flyout>
 
             <StackPanel Orientation="Horizontal">
-                <!--
-                <StackPanel.Resources>
-                    <data:RegistracijaKontrola x:Key="regisrovani"/>
-                </StackPanel.Resources> -->
                 <TextBlock Name="logovaniKorisnik" VerticalAlignment="Center" Text="{x:Bind Logovani, Mode=OneWay}" FontFamily="Roboto"/>
                 <Border Background="Bisque" CornerRadius="50" VerticalAlignment="Center" Width="30" Height="30" Margin="10,0,0,0"/>
             </StackPanel>

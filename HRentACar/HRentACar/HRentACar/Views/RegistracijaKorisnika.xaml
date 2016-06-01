@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="HRentACar.HRentACar.Views.BlankPage1"
+    x:Class="HRentACar.HRentACar.Views.RegistracijaKorisnika"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:HRentACar.HRentACar.Views"
@@ -49,7 +49,7 @@
         </VisualStateManager.VisualStateGroups>
 -->
         <Grid.Background>
-            <SolidColorBrush Color="WhiteSmoke" Opacity="0.38"/>
+            <ImageBrush ImageSource="/Assets/pozadina3.jpg" Opacity="0.5" />
         </Grid.Background>
 
         <Grid.RowDefinitions>
@@ -94,7 +94,7 @@
 
             <PasswordBox Grid.Row="5" Grid.Column="2" Margin="0, 0, 10, 0" x:Name="potvrda" HorizontalAlignment="Left" Height="21" VerticalAlignment="Bottom" Width="170" Password="{Binding uPasswordPotvrda, Mode=TwoWay}"/>
         <TextBlock Grid.Row="5" Grid.Column="2" Text="{Binding PotvrdaV, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" x:Name="potvrdaValidacija" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Foreground="Red"/>
-        <TextBox Grid.Row="6" Grid.Column="2" Margin="0, 0, 10, 0" x:Name="prebivaliste" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding uPrebivaliste, Mode=TwoWay}" VerticalAlignment="Bottom" Width="170" LostFocus="prebivaliste_LostFocus"/>
+        <TextBox Grid.Row="6" Grid.Column="2" Margin="0, 0, 10, 0" x:Name="prebivaliste" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding uPrebivaliste, Mode=TwoWay}" VerticalAlignment="Bottom" Width="170" />
             <TextBlock Grid.Row="6" Grid.Column="2" Text="{Binding PrebivalisteV, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" x:Name="prebivalisteValidacija" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Foreground="Red"/>
 
             <CheckBox Grid.Row="7" Grid.Column="2" x:Name="vozacka" Content="" HorizontalAlignment="Left" Height="35" VerticalAlignment="Center" Width="52"/>
@@ -102,9 +102,10 @@
             <TextBlock Grid.Row="8" Grid.Column="1" Margin="10, 0, 0, 0" x:Name="SlikaLabel" HorizontalAlignment="Left" Width="145"
 TextWrapping="Wrap" Text="Slika :" VerticalAlignment="Bottom"/>
 
-            <Button Grid.Row="8" Grid.Column="2" x:Name="buttonUpload" Content="Upload"
-HorizontalAlignment="Left" VerticalAlignment="Bottom"
-Height="36" Width="145" Margin="0, 0, 10, 0"/>
+            <Button Grid.Row="8" Grid.Column="2" x:Name="buttonUpload" Content="{Binding uUpload, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+            HorizontalAlignment="Left" VerticalAlignment="Bottom"
+            Height="36" Width="145" Margin="0, 0, 10, 0"
+            Command="{Binding UploadSliku}"/>
 
             <TextBlock Grid.Column="1" Grid.Row="9" Foreground="Red" Name="verifikacija" HorizontalAlignment="Right" TextWrapping="Wrap" Text="{Binding VerifikacijaPoruka, UpdateSourceTrigger=PropertyChanged}"></TextBlock>
         
