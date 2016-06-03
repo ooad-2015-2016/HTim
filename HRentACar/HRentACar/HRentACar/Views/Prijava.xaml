@@ -8,8 +8,31 @@
     xmlns:data="using:HRentACar.HRentACar.Views.Kontrole"
     mc:Ignorable="d"
 >
+    <Page.Resources>
 
-    <Grid Margin="55, 0, 0, 0" >
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="WhiteSmoke" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="FontSize" Value="15" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="12" Background="{TemplateBinding Background}" Width="Auto">
+                            <Grid>
+                                <ContentPresenter x:Name="MyContentPresenter" Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" />
+                            </Grid>
+                        </Border>
+
+
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </Page.Resources>
+
+
+    <Grid Margin="55, 0, 0, 0" Name="grid" >
 
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup x:Name="VisualStateGroup">
@@ -44,11 +67,7 @@
                 </VisualState>
 
             </VisualStateGroup>
-
-
-
         </VisualStateManager.VisualStateGroups>
-
 
         <Grid.Background>
             <ImageBrush ImageSource="/Assets/pozadina2.jpg" Opacity="0.66" />
@@ -67,13 +86,21 @@
             <ColumnDefinition Width="2*" />
         </Grid.ColumnDefinitions>
 
-        <GridView Name="grid" Grid.Row="1" Grid.Column="1">
+       <!-- <GridView Name="grid" Grid.Row="1" Grid.Column="1">
             
             <data:LogIn Loaded="LogIn_Loaded"/>
 
 
         </GridView>
-
-
+        
+        -->
+        <StackPanel Name="stekPanel" Grid.Column="1" Grid.Row="1">
+            <TextBlock Name="eMail" Text="Email:" Margin="0, 0, 0, 0" HorizontalAlignment="Left" TextWrapping="Wrap"/>
+            <TextBox Margin="0, 0, 0, 0" Background="White" x:Name="mail" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding uMail, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="230" />
+            <TextBlock Name="sifraa" Text="Šifra:" Margin="0, 0, 0, 0" HorizontalAlignment="Left" TextWrapping="Wrap"/>
+            <PasswordBox Background="White"  x:Name="sifra" HorizontalAlignment="Left" Password="{Binding uPassword, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="230" />
+            <Button  Grid.Row="4" x:Name="prijaviSe" Content="Prijavi se" FontSize="16" HorizontalAlignment="Center" Height="34" VerticalAlignment="Center" Width="131" Command="{Binding Prijavi}"  />
+        </StackPanel>
+     
     </Grid>
 </Page>

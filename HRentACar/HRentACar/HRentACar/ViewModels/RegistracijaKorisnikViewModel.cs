@@ -86,7 +86,7 @@ namespace HRentACar.HRentACar.ViewModels
             }
 
             //MAIL VALIDACIJA
-            Regex regx = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            Regex regx = new Regex(@"^([\w\.\-]+)@([\w\-]+)([\w\.\-]+)$");
             Match match = regx.Match(uMail);
             if (!match.Success)
             {

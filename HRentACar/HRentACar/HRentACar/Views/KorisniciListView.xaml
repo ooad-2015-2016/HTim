@@ -6,7 +6,9 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vjuvz ="using:HRentACar.HRentACar.Views"
     xmlns:modeli ="using:HRentACar.HRentACar.Models"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    Loaded="Page_Loaded"
+>
 
         <Page.Resources>
             <vjuvz:PictureConverter x:Key="thePictureConverter"/>
@@ -27,29 +29,30 @@
 
         <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" Text="Registrovani korisnici Rent-A-Car usluga" Grid.ColumnSpan="2"
                    FontFamily="Calibri" FontSize="20"/>
-
-
-        <!--Lista za prikaz svih korisnika-->
-            <ListView Name="korisnici" Grid.ColumnSpan="2" Grid.Row="2">
+            
+        
+        <!-- za prikaz svih korisnika -->
+            <ListView Name="korisnici" Grid.Column="1"  Grid.Row="2">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Vertical" >
 
-                            <TextBlock Text="{Binding Korisnik.Ime}" Margin="5,0,0,0"/>
-                            <TextBlock Text="{Binding Korisnik.Prezime}" Margin="5,0,0,0" />
-                            <TextBlock Text="{Binding Korisnik.Sifra}" Margin="5,0,0,0" />
-                            <TextBlock Text="{Binding Korisnik.Email}" Margin="5,0,0,0"/>
+                            <TextBlock Text="{Binding Ime}" Foreground="Red" Margin="5,0,0,0"/>
+                            <TextBlock Text="{Binding Prezime}" Margin="5,0,0,0" />
+                            <TextBlock Text="{Binding Sifra}" Margin="5,0,0,0" />
+                            <TextBlock Text="{Binding Email}" Margin="5,0,0,0"/>
                             <Button Content="Delete" Click="Button_Click_Delete" Margin="5,5,5,5"/>
                      
-                            <Image x:Name="image" HorizontalAlignment="Left" Height="100"
+                         <!--  <Image x:Name="image" HorizontalAlignment="Left" Height="100"
 Margin="5,0,0,0" VerticalAlignment="Top" Source="{Binding Slika, Converter={StaticResource
 thePictureConverter}}"/>
-                            
+                            -->
                                                       
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            
         </Grid>
 
 

@@ -60,7 +60,12 @@ namespace HRentACar
             {
                 nazad.Visibility = Visibility.Collapsed;
                 stekPenl.Visibility = Visibility.Collapsed;
-                mainContentFrame.Navigate(typeof(KorisniciListView));
+                if (App.Mail.Equals("bhomarac1@etf.unsa.ba") && App.Password.Equals("123456") ||
+                    App.Mail.Equals("sumejja.halilovic.96@gmail.com") && App.Password.Equals("fifija"))
+                    mainContentFrame.Navigate(typeof(KorisniciListView));
+
+                else
+                    mainContentFrame.Navigate(typeof(Pocetna));
             }
             else if (iNFO.IsSelected)
             {
@@ -70,7 +75,7 @@ namespace HRentACar
             else if(Prijava.IsSelected)
             {
                 nazad.Visibility = Visibility.Collapsed;
-                mainContentFrame.Navigate(typeof(Prijava));
+                mainContentFrame.Navigate(typeof(Prijava), new PrijavaViewModel(this));
             }
         }
 

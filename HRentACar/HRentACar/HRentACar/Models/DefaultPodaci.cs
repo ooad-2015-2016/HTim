@@ -21,20 +21,13 @@ namespace HRentACar.HRentACar.Models
                     Sifra = "123456",
                     Email = "bhomarac1@etf.unsa.ba"
                 
-                }
-                );
-                context.SaveChanges();
-
-
-                context.Korisnici.AddRange(
-                new Korisnik()
+                }, new Korisnik()
                 {
                     KorisnikId = 2,
                     Ime = "Sumejja",
                     Prezime = "Halilovic",
-                    Sifra = "sifra",
+                    Sifra = "fifija",
                     Email = "sumejja.halilovic.96@gmail.com"
-
                 }
                 );
                 context.SaveChanges();

@@ -33,14 +33,14 @@ namespace HRentACar.HRentACar.Views
             this.InitializeComponent();
         }
 
-        private void Page_Loaded(object sender, RoutedEventArgs e)
+        
+        private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
             using (var db = new KorisnikDbContext())
             {
                 korisnici.ItemsSource = db.Korisnici.ToList();
             }
         }
-                
 
         private void Button_Click_Delete(object sender, RoutedEventArgs e)
         {

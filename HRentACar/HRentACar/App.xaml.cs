@@ -26,16 +26,18 @@ namespace HRentACar
     /// </summary>
     sealed partial class App : Application
     {
-        public static String ImeLogIn {get; set;}
-        public static String Mail { get; set; }
+        public static string ImeLogIn {get; set;}
+        public static string Mail { get; set; }
+        public static string Password { get; set; }
 
         public App()
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
 
-            ImeLogIn = "Dobrodošli";
-            Mail = "GOST";
+            ImeLogIn = "";
+            Mail = "";
+            Password = "";
 
             using (var db = new KorisnikDbContext())
             {

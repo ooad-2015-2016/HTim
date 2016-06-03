@@ -111,8 +111,13 @@
     <Compile Include="HRentACar\Models\Vozac.cs" />
     <Compile Include="HRentACar\Models\Vozilo.cs" />
     <Compile Include="HRentACar\Models\VoziloDbContext.cs" />
+    <Compile Include="HRentACar\ViewModels\AdministratorViewModel.cs" />
     <Compile Include="HRentACar\ViewModels\MainModelView.cs" />
+    <Compile Include="HRentACar\ViewModels\PrijavaViewModel.cs" />
     <Compile Include="HRentACar\ViewModels\RegistracijaKorisnikViewModel.cs" />
+    <Compile Include="HRentACar\Views\AdministratorForma.xaml.cs">
+      <DependentUpon>AdministratorForma.xaml</DependentUpon>
+    </Compile>
     <Compile Include="HRentACar\Views\RegistracijaKorisnika.xaml.cs">
       <DependentUpon>RegistracijaKorisnika.xaml</DependentUpon>
     </Compile>
@@ -132,9 +137,6 @@
     <Compile Include="HRentACar\Models\Item.cs" />
     <Compile Include="HRentACar\Views\Katalog.xaml.cs">
       <DependentUpon>Katalog.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="HRentACar\Views\Kontrole\LogIn.xaml.cs">
-      <DependentUpon>LogIn.xaml</DependentUpon>
     </Compile>
     <Compile Include="HRentACar\Views\Kontrole\VoziloDetalji.xaml.cs">
       <DependentUpon>VoziloDetalji.xaml</DependentUpon>
@@ -225,6 +227,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="HRentACar\Views\AdministratorForma.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="HRentACar\Views\RegistracijaKorisnika.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -246,10 +252,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="HRentACar\Views\Katalog.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="HRentACar\Views\Kontrole\LogIn.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
