@@ -77,6 +77,11 @@ namespace HRentACar
                 nazad.Visibility = Visibility.Collapsed;
                 mainContentFrame.Navigate(typeof(Prijava), new PrijavaViewModel(this));
             }
+            else if (Lokacija.IsSelected)
+            {
+                nazad.Visibility = Visibility.Collapsed;
+                mainContentFrame.Navigate(typeof(Lokacija));
+            }
         }
 
         private void nazad_Click(object sender, RoutedEventArgs e)

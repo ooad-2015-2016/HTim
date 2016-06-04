@@ -1,0 +1,35 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HRentACar.HRentACar.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps"
+    x:Class="HRentACar.HRentACar.Views.Lokacija"
+    xmlns:maps="using:Windows.UI.Xaml.Controls.Maps"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="55,0,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="399*"/>
+            <RowDefinition Height="241*"/>
+        </Grid.RowDefinitions>
+
+        <ScrollViewer Margin="0,0,-51,0" Grid.RowSpan="2">
+
+            <StackPanel>
+                <Button x:Name="button" Content="Gdje se nalazimo?" HorizontalAlignment="Left" Margin="55,30,0,0" VerticalAlignment="Top" Click="dajLokaciju" Width="160" />
+                <maps:MapControl x:Name= "Mapa" Center="{Binding TrenutnaLokacija, Mode=OneWay}" HorizontalAlignment="Left" Margin="55,20,0,0" VerticalAlignment="Top" MapServiceToken="gLDM2uQOrMKncQQGaILb~eXLFDWKi9YeBltJ3-GKacw~AjSPSn2gVrcOLX6DLv1QbQSJbzI7cE9LkhkhaYGisltn83rlTS-9zzrZlxrkvv7T" Height="300" Width="300"/>
+                <TextBlock Text="Geografska širina:" Margin="55,20,0,-95" />
+                <TextBlock Text="Geograska dužina:" Margin="55,40,0,-143" />
+                <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="200,20,0,0" TextWrapping="Wrap" Text= " " VerticalAlignment="Top"/>
+                <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="200,0,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top"/>
+
+
+            </StackPanel>
+
+        </ScrollViewer>
+
+
+    </Grid>
+</Page>

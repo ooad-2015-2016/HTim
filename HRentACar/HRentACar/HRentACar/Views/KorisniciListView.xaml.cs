@@ -38,29 +38,35 @@ namespace HRentACar.HRentACar.Views
         {
             using (var db = new KorisnikDbContext())
             {
-                korisnici.ItemsSource = db.Korisnici.ToList();
+                listViewKorisnici.ItemsSource = db.Korisnici.ToList();
             }
         }
 
-        private void Button_Click_Delete(object sender, RoutedEventArgs e)
+
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //Dobavljanje objekta iz liste koji je kori[ten da se popuni red u listview
             DependencyObject dep = (DependencyObject)e.OriginalSource;
+
             while ((dep != null) && !(dep is ListViewItem))
             {
                 dep = VisualTreeHelper.GetParent(dep);
             }
+
             if (dep == null)
                 return;
+
             using (var db = new KorisnikDbContext())
             {
-                db.Korisnici.Remove((Korisnik)korisnici.ItemFromContainer(dep));
-                //Nije jos obrisano dok nije Save
+                db.Korisnici.Remove((Korisnik)listViewKorisnici.ItemFromContainer(dep));
+
                 db.SaveChanges();
 
-                korisnici.ItemsSource = db.Korisnici.OrderBy(c => c.Ime).ToList();
+                listViewKorisnici.ItemsSource = db.Korisnici.OrderBy(c => c.Prezime).ToList();
+
+          
             }
-        }
+        }   
+            
     }
 }
 

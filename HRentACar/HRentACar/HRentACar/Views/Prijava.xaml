@@ -99,7 +99,7 @@
             <TextBox Margin="0, 0, 0, 0" Background="White" x:Name="mail" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding uMail, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="230" />
             <TextBlock Name="sifraa" Text="Šifra:" Margin="0, 0, 0, 0" HorizontalAlignment="Left" TextWrapping="Wrap"/>
             <PasswordBox Background="White"  x:Name="sifra" HorizontalAlignment="Left" Password="{Binding uPassword, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="230" />
-            <Button  Grid.Row="4" x:Name="prijaviSe" Content="Prijavi se" FontSize="16" HorizontalAlignment="Center" Height="34" VerticalAlignment="Center" Width="131" Command="{Binding Prijavi}"  />
+            <Button Margin="0, 2, 0, 0" x:Name="prijaviSe" Content="Prijavi se" FontSize="16" Height="34"  Width="131" Command="{Binding Prijavi}"  />
         </StackPanel>
      
     </Grid>

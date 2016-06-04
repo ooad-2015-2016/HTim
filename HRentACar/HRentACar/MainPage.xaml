@@ -39,10 +39,13 @@
                     </MenuFlyout>
                 </Button.Flyout>
 
+             <!--
                 <StackPanel Name="profil" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="400, 0, 0, 0" >
                     <TextBlock Name="logovaniKorisnik" VerticalAlignment="Center" Text="{Binding Logovani, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" FontFamily="Roboto"/>
-                    <Border Background="Bisque" CornerRadius="50" VerticalAlignment="Center" Width="30" Height="30" Margin="10,0,0,0"/>
+                    <Border Background="Wheat" CornerRadius="50" VerticalAlignment="Center" Width="30" Height="30" Margin="10,0,0,0"/>
                 </StackPanel>
+                -->   
+                
             </Button>
         </RelativePanel>
 
@@ -99,8 +102,17 @@
                     <ListBoxItem Name="iNFO">
                         <StackPanel Orientation="Horizontal">
 
-                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE11B;" FontSize="30" />
+                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE946;" FontSize="30" />
                             <TextBlock Text="iNFO" FontSize="22"  Margin="20, 0, 0, 0" />
+
+                        </StackPanel>
+                    </ListBoxItem>
+
+                    <ListBoxItem Name="Lokacija">
+                        <StackPanel Orientation="Horizontal">
+
+                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE128;" FontSize="30" />
+                            <TextBlock Text="Lokacija" FontSize="22"  Margin="20, 0, 0, 0" />
 
                         </StackPanel>
                     </ListBoxItem>

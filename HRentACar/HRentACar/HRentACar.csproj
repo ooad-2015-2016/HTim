@@ -118,6 +118,9 @@
     <Compile Include="HRentACar\Views\AdministratorForma.xaml.cs">
       <DependentUpon>AdministratorForma.xaml</DependentUpon>
     </Compile>
+    <Compile Include="HRentACar\Views\Lokacija.xaml.cs">
+      <DependentUpon>Lokacija.xaml</DependentUpon>
+    </Compile>
     <Compile Include="HRentACar\Views\RegistracijaKorisnika.xaml.cs">
       <DependentUpon>RegistracijaKorisnika.xaml</DependentUpon>
     </Compile>
@@ -228,6 +231,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="HRentACar\Views\AdministratorForma.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HRentACar\Views\Lokacija.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
