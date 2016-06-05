@@ -1,0 +1,9 @@
+Rent a car 
+
+1. Pri samom otvaranju forme sa lijeve strane se nalazi “hamburger meni”. Korisnik može jednim klikom preæi na formu za registraciju, za log-in, pregled automobila u katalogu, informacije ili otvoriti formu gdje se pokazuje trenutna korisnikova lokacija. 
+
+2. Prilikom registracije korisnik popunjava formu i prijavljuje se. Na taj naèin æe se upisati u bazu registrovanih korisnika. Korisnici se èuvaju u bazi. I postoji validacija podataka prilikom registrovanja.
+
+3. Ukoliko se registruje administrator, moze vidjeti listu svih ostalih korisnika te brisati iste. (Jedan od administratora je sa sljedecim podacima : e-mail: bhomarac1@etf.unsa.ba; password: 12345) 
+
+4. Kikom na sliku u katalogu otvara se forma gdje piše više detalja o odabranom automobilu (npr. Prikaz više slika u flipwiew-u, prikaz detaljnog opisa automobila) i u nastavku se može rezervisati isti. Takoðer je u ovom dijelu vidljiv i “back button”, koji prebacuje na formu kataloga i omoguæava dalju pretragu. 
